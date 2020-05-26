@@ -5,4 +5,4 @@
 # 确保脚本抛出遇到的错误
 set -e
 
-echo '' > public/CNAME
+echo 'https://phy-lei.github.io/blog/' > public/CNAME
