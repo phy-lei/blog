@@ -4,4 +4,4 @@
 /node_modules
 
 # production
-.vuepress/dist
+/public

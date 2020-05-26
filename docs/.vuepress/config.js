@@ -1,6 +1,6 @@
 module.exports = {
   "base": "/blog/",
-  "title": "",
+  "title": "phy-lei",
   "description": "",
   "dest": "public",
   "head": [
@@ -27,8 +27,6 @@ module.exports = {
         "link": "/",
         "icon": "reco-home"
       },
-      // { text: 'Category', link: '/Category/', icon: 'reco-category' },
-      // { text: 'Tags', link: '/tags/', icon: 'reco-tag' },
       {
         "text": "TimeLine",
         "link": "/timeline/",
