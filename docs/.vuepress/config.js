@@ -60,12 +60,6 @@ module.exports = {
     },
     "friendLink": [
       {
-        "title": "午后南杂",
-        "desc": "Enjoy when you can, and endure when you must.",
-        "email": "1156743527@qq.com",
-        "link": "https://www.recoluan.com"
-      },
-      {
         "title": "vuepress-theme-reco",
         "desc": "A simple and beautiful vuepress Blog & Doc theme.",
         "avatar": "https://vuepress-theme-reco.recoluan.com/icon_vuepress_reco.png",
@@ -80,7 +74,7 @@ module.exports = {
       "clientSecret": secret.Vssue_ClientSecret,
       "autoCreateIssue": true,
     },
-    "logo": "/logo.png",
+    "logo": "/avatar.jpg",
     "search": true,
     "searchMaxSuggestions": 10,
     "sidebar": "auto",
@@ -91,7 +85,8 @@ module.exports = {
     "startYear": "2020"
   },
   "markdown": {
-    "lineNumbers": true
+    "lineNumbers": false,
+    "highlightLines": true
   },
   "plugins":{
     '@vuepress/google-analytics':{
