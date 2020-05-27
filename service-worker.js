@@ -27,7 +27,11 @@ self.addEventListener('message', (event) => {
 self.__precacheManifest = [
   {
     "url": "404.html",
-    "revision": "2c92e4c32f80e048e1fa097491dda28f"
+    "revision": "3307db6995434468812b284aecb08765"
+  },
+  {
+    "url": "assets/121501/1.png",
+    "revision": "c4bdcde64b3d33cbc8baec7e9d21d6f5"
   },
   {
     "url": "assets/200526/1.png",
@@ -78,11 +82,11 @@ self.__precacheManifest = [
     "revision": "bd4c124c8112c31713622b247d7f6b48"
   },
   {
-    "url": "assets/js/14.51f45e3d.js",
-    "revision": "de2a3b3d8f3d6cfee028b49f814c0e26"
+    "url": "assets/js/14.8698a128.js",
+    "revision": "d1b4efc02d32a8ce55a89e270bfa32b8"
   },
   {
-    "url": "assets/js/15.d7a6811d.js",
+    "url": "assets/js/15.2b236a71.js",
     "revision": "84b2cf8268c619136703614ee3e14ff4"
   },
   {
@@ -122,8 +126,8 @@ self.__precacheManifest = [
     "revision": "66fd050c627ec3a1cd0e4f18a42c37fc"
   },
   {
-    "url": "assets/js/app.874ae282.js",
-    "revision": "edf6f5a8372f9cc28b537f208dc73da3"
+    "url": "assets/js/app.47f69450.js",
+    "revision": "0cf2933c49edc7664db5950993957f45"
   },
   {
     "url": "avatar.jpg",
@@ -139,19 +143,19 @@ self.__precacheManifest = [
   },
   {
     "url": "categories/article/index.html",
-    "revision": "d925dacb2ce358ab4c87285b92161444"
+    "revision": "c33a4fea7983950f97633252be46d4d8"
   },
   {
     "url": "categories/index.html",
-    "revision": "be25219f7ab543254616c95a4de4e5d6"
+    "revision": "4507ea39dedc3a4b26b78a258fb1b16e"
   },
   {
     "url": "categories/noteDev/index.html",
-    "revision": "72f045afe06b4594e560d5f70f8da257"
+    "revision": "e3de44a831ab0f546ec18ebb357cac1e"
   },
   {
-    "url": "hero.png",
-    "revision": "5367b9349d4e048235eeed50d9ef36df"
+    "url": "hero.jpg",
+    "revision": "c60b4e9b3a0454137d336d7fdf4a3bf7"
   },
   {
     "url": "icons/icon-128x128.png",
@@ -191,7 +195,7 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "a4abd9549dd82b84957ec4c71659cef8"
+    "revision": "b415b8e9f50c0adb922dac72d5b02840"
   },
   {
     "url": "logo.png",
@@ -203,47 +207,47 @@ self.__precacheManifest = [
   },
   {
     "url": "tag/index.html",
-    "revision": "b17be7424b088ed65de6f116ec8be436"
+    "revision": "efba8611d75a67885941fa361173c455"
   },
   {
-    "url": "tag/tag1/index.html",
-    "revision": "a70107189481282e2b977002a8ed7e77"
-  },
-  {
-    "url": "tag/tag2/index.html",
-    "revision": "d2f36964eb2c869f2483355fd7aa2e55"
+    "url": "tag/react/index.html",
+    "revision": "584a43fc6120c0e3919058d3e95539bc"
   },
   {
     "url": "tag/tag3/index.html",
-    "revision": "9db754efa2edd02b554540729df35c08"
+    "revision": "f6ff6a88153d8069a7cf2b6bf42bdb43"
   },
   {
     "url": "tag/tag4/index.html",
-    "revision": "226590832ec0bd83d0a307ba595a991e"
+    "revision": "dd3a7a8a5d35b53f827a4380aababb28"
+  },
+  {
+    "url": "tag/vuepress/index.html",
+    "revision": "56a80d607d9cea0236903f12793d6d2f"
   },
   {
     "url": "timeline/index.html",
-    "revision": "d2a787ecc667f72a8a2c7f4813999161"
+    "revision": "ef95ee245e14124700b46e9ea0898b2a"
   },
   {
     "url": "views/article/2016/121501.html",
-    "revision": "43f839b8fc80fd7f22de014c2bc99700"
+    "revision": "78c01ece5f02e30e61a17cc84b398746"
   },
   {
     "url": "views/article/2017/092101.html",
-    "revision": "a97e471a705a526ee7b8285c74b9b467"
+    "revision": "ed9d940e7d514e7be1573bf2fa183a52"
   },
   {
-    "url": "views/noteDev/2018/121501.html",
-    "revision": "b6da6457bef79911cceb83b0dbeeb9de"
+    "url": "views/noteDev/react/hook踩坑记.html",
+    "revision": "76bcbd3a5a039b2ef232af0d78a82422"
   },
   {
-    "url": "views/noteDev/2020/200526.html",
-    "revision": "9fc194beee7ec221da4ad463ed625131"
+    "url": "views/noteDev/vuepress/200526.html",
+    "revision": "14ed34f62d083cb030dad116e51289af"
   },
   {
     "url": "views/other/guide.html",
-    "revision": "07396761fc27e907930aceaac6b2331f"
+    "revision": "f7419ae0ed962092fa1cf9b1c7b11caa"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
