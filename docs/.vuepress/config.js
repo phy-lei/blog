@@ -1,3 +1,6 @@
+
+const secret = require("./secret.js")
+console.log(process.env.NODE_ENV);
 module.exports = {
   "base": "/blog/",
   "title": "phy-lei",
@@ -73,8 +76,8 @@ module.exports = {
       "platform": 'github',
       "owner": 'phy-lei',
       "repo": 'blog',
-      "clientId": '90bddff2c3480c40e83e',
-      "clientSecret": 'a3148851be17494384ddff30716dcc6760493133',
+      "clientId": secret.Vssue_ClientId,
+      "clientSecret": secret.Vssue_ClientSecret,
       "autoCreateIssue": true,
     },
     "logo": "/logo.png",
@@ -89,5 +92,13 @@ module.exports = {
   },
   "markdown": {
     "lineNumbers": true
+  },
+  "plugins":{
+    '@vuepress/google-analytics':{
+      'ga': secret.ga
+    }
+  },
+  "define": {
+    "process.env.NODE_ENV": process.env.NODE_ENV,
   }
 }
