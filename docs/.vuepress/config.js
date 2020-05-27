@@ -4,7 +4,7 @@ console.log(process.env.NODE_ENV);
 module.exports = {
   "base": "/blog/",
   "title": "phy-lei",
-  "description": "",
+  "description": "残留枝头的樱花瓣，也终将迎来凋零的命运",
   "dest": "public",
   "head": [
     [
