@@ -4,7 +4,7 @@
   "author": "reco_luan",
   "scripts": {
     "dev": "cross-env NODE_ENV=development vuepress dev docs",
-    "build": "cross-env NODE_ENV=production && vuepress build docs",
+    "build": "cross-env NODE_ENV=production vuepress build docs",
     "deploy": "bash deploy.sh",
     "cname": "bash cname.sh",
     "travis": "bash deployGit.sh"

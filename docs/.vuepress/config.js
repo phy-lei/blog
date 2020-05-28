@@ -28,9 +28,11 @@ module.exports = {
         "name": "viewport",
         "content": "width=device-width,initial-scale=1,user-scalable=no"
       }
-    ]
+    ],
   ],
+  "theme": 'vuepress-theme-yilia-plus',
   "theme": "reco",
+  
   "themeConfig": {
     "nav": [
       {
@@ -89,8 +91,24 @@ module.exports = {
     "lastUpdated": "Last Updated",
     "author": "",
     "authorAvatar": "/mine.jpg",
-    "record": "xxxx",
-    "startYear": "2020"
+    /* vuepress-theme-yilia-plus 配置 */
+    "yilia_plus": {
+      // github-corner(关闭请设置为false)
+      "github": {
+        "url": "https://github.com/phy-lei/"
+      },
+      "footer": {
+        // 网站成立年份(若填入年份小于当前年份，则显示为 2018-2019 类似的格式)
+        "since": 2020,
+        // 网站作者(关闭请设置为false)
+        "author": '<a href="https://github.com/phy-lei/" target="_blank">phy-lei</a>',
+        // 访问量统计功能(不蒜子)
+        "busuanzi": {
+          // 是否启用(关闭请设置为false)
+          "enable": true
+        }
+      }
+    }
   },
   "markdown": {
     "lineNumbers": false,

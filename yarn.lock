@@ -1301,7 +1301,7 @@
     semver "^6.0.0"
     upath "^1.1.0"
 
-"@vuepress/theme-default@1.5.0":
+"@vuepress/theme-default@1.5.0", "@vuepress/theme-default@^1.0.3":
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/@vuepress/theme-default/-/theme-default-1.5.0.tgz#8df53c77c6f464452867bdd80c2037b1f715343c"
   integrity sha512-qdV0TVuKt0N9s0sVKRPmrW9o1aLcW2AZvkHATdDmAjKk8R34JC7Gqa0QiBsGLrIr7dUvEVYXy9T0r6IG2Z+dog==
@@ -2106,6 +2106,11 @@ builtin-status-codes@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/builtin-status-codes/-/builtin-status-codes-3.0.0.tgz#85982878e21b98e1c66425e03d0174788f569ee8"
   integrity sha1-hZgoeOIbmOHGZCXgPQF0eI9Wnug=
+
+busuanzi.pure.js@^1.0.2:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/busuanzi.pure.js/-/busuanzi.pure.js-1.0.3.tgz#a03784db9e5b2c42a059b16551d2511933a46f5c"
+  integrity sha512-tPULdyx+8NNb9geZYDpktKmHAYx9f2LEOBaHyWCaM7iPEMIa/43KgYAUluuU7YG9UFSOFpj4dO7Nj2Vlu3V9Rg==
 
 bytebuffer@~5:
   version "5.0.1"
@@ -8396,6 +8401,14 @@ vuepress-theme-reco@1.4.5:
     md5 "2.2.1"
     valine "1.4.4"
     vue-click-outside "1.1.0"
+
+vuepress-theme-yilia-plus@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/vuepress-theme-yilia-plus/-/vuepress-theme-yilia-plus-1.0.0.tgz#08b78fb15c9e54237b26c6f740ab5b3f4d1b0109"
+  integrity sha512-lprc3QPI4Drmnae/gntg+jltPw0i2kXHt8jTBH96mAIaKgotSl6hJnvePo/1pJQ7fid0X/65q+w0mO5L/rV5Fg==
+  dependencies:
+    "@vuepress/theme-default" "^1.0.3"
+    busuanzi.pure.js "^1.0.2"
 
 vuepress@^1.5.0:
   version "1.5.0"
