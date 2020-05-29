@@ -27,7 +27,7 @@ self.addEventListener('message', (event) => {
 self.__precacheManifest = [
   {
     "url": "404.html",
-    "revision": "1b74c89304e9f01178803b6070d86fbd"
+    "revision": "438cbb81e0a00ae2334a8b483a4f6e3c"
   },
   {
     "url": "assets/121501/1.png",
@@ -134,8 +134,8 @@ self.__precacheManifest = [
     "revision": "66fd050c627ec3a1cd0e4f18a42c37fc"
   },
   {
-    "url": "assets/js/app.ab63c5b3.js",
-    "revision": "5d751d54a54c13bad2154d16e2c15c30"
+    "url": "assets/js/app.a5c35656.js",
+    "revision": "6dcecb71940c2be05e6d20c6aa4cba1e"
   },
   {
     "url": "avatar.jpg",
@@ -151,15 +151,15 @@ self.__precacheManifest = [
   },
   {
     "url": "categories/article/index.html",
-    "revision": "bf33dbde0fbaaa6250e5057caaa65f0d"
+    "revision": "78973e7773941964ecbb2a14f36b6c69"
   },
   {
     "url": "categories/index.html",
-    "revision": "0b052124adf7902a33137951ff1bb829"
+    "revision": "99bc0b0d3ca50332b2d3a04e23191ee6"
   },
   {
     "url": "categories/noteDev/index.html",
-    "revision": "5b8e61f79e90306960b494eac06ed5c1"
+    "revision": "fd19d164c99d5964f24d464d63f70a2b"
   },
   {
     "url": "hero.jpg",
@@ -203,7 +203,7 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "0406e27b9b57c26476896a61a5093f71"
+    "revision": "ecb0a02ef01d10e110f33226fa1de23b"
   },
   {
     "url": "logo.png",
@@ -215,59 +215,59 @@ self.__precacheManifest = [
   },
   {
     "url": "tag/index.html",
-    "revision": "8562701e0be89e9080a7aa4ab14428ab"
+    "revision": "45eb32fa5cbdd76540eea3c45de52147"
   },
   {
     "url": "tag/linux/index.html",
-    "revision": "c366d54c3fbbaf4286046522871b4e38"
+    "revision": "ee5e85560843a2d8802f84154144613c"
   },
   {
     "url": "tag/react/index.html",
-    "revision": "1a64212823c5af8fa3b9235eaf5b3454"
+    "revision": "08f83ba09385776c8266a64ce1e352a3"
   },
   {
     "url": "tag/tag3/index.html",
-    "revision": "e61f0a00d54ff547dd84eba8ec7ee416"
+    "revision": "dc930b0c461ecfd9d2b9b9da4d57dc78"
   },
   {
     "url": "tag/tag4/index.html",
-    "revision": "9ada426ad41ef74fa1b75dd4d3427e22"
+    "revision": "fd0dfadcee76db03b7b465e3fef908a5"
   },
   {
     "url": "tag/vuepress/index.html",
-    "revision": "823f629c31d3ee8741afed1679c0fbcd"
+    "revision": "f521dd9d10c6b6a89556793f4023ffab"
   },
   {
     "url": "timeline/index.html",
-    "revision": "d2e7f64bec0b46084328a301a9b6d9ad"
+    "revision": "e41ea29084c0ea6971ae56755f20a588"
   },
   {
     "url": "views/article/2016/121501.html",
-    "revision": "3426c2d3da3487d4c7bb99fa9f6793b1"
+    "revision": "3d0b1edf25a571bbe8a1489afd4c0068"
   },
   {
     "url": "views/article/2017/092101.html",
-    "revision": "2a280c0e0460b174ff2db1b7b07f751c"
+    "revision": "16c8af278662430e0b1a5e401f59a9e2"
   },
   {
     "url": "views/noteDev/linux/2020529.html",
-    "revision": "1ad55e04d4cbcbca0b3c6771a0da7014"
+    "revision": "5d52d69737d6369902fe50a65a4fa382"
   },
   {
     "url": "views/noteDev/react/hook踩坑记.html",
-    "revision": "73ea6e0ac145e91bfd2f3b0301cde207"
+    "revision": "606c0c8b24ec26763499d3bc4e668949"
   },
   {
     "url": "views/noteDev/vuepress/200526.html",
-    "revision": "4fe777407f265b5a078c88543565c3d4"
+    "revision": "77a3c26dcab6389fa3524d24c7087dad"
   },
   {
     "url": "views/noteDev/vuepress/history模式.html",
-    "revision": "5390a01a2a4d1d08c8fb5caf3ab07a2b"
+    "revision": "a020ea9a6ec4fb7433c5ff0e87f66b0f"
   },
   {
     "url": "views/other/guide.html",
-    "revision": "5073d40c47dbded96794b38dd3b7100e"
+    "revision": "cc3f715af7e0e5776212c79bff4ba9b0"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
