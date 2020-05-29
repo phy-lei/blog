@@ -21,6 +21,7 @@ server {
     server_name  域名/外网IP;
     index index.html;
     root  /www/server/dist;  #dist上传的路径
+    # 避免访问出现 404 错误
     error_page 404 /index.html;
 }
 ```
@@ -33,11 +34,11 @@ server {
     server_name 域名/外网IP;
     index index.html;
     root  /www/server/dist;  #dist上传的路径
-    # 避免访问出现 404 错误
     location / {
-    	try_files $uri $uri/ @router;
+    	try_files $uri $uri/ @router; 
     	index  index.html;
     }
+    #重定向
     location @router {
     	rewrite ^.*$ /index.html last;
     }  
