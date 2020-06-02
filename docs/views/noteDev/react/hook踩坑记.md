@@ -4,7 +4,8 @@ date: 2020-04-15
 tags:
  - react
 categories:
- -  noteDev
+ -  react
+permalink: /20200415
 ---
 
 ## react hook 的踩坑记录

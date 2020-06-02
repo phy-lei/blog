@@ -4,7 +4,8 @@ date: 2020-05-29
 tags:
  - linux
 categories:
- -  noteDev
+ -  linux
+permalink: /20200529
 ---
 
 ## 步骤

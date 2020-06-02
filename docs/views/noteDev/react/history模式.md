@@ -2,9 +2,10 @@
 title: 项目部署上线，报404？究竟是？？？
 date: 2020-05-28
 tags:
- - vuepress
+ - react
 categories:
- - noteDev
+ - react
+permalink: /20200528
 ---
 
 ## history模式的坑

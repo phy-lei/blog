@@ -4,7 +4,8 @@ date: 2020-05-26
 tags:
  - vuepress
 categories:
- - noteDev
+ - vuepress
+permalink: /20200526
 ---
 
 ## 方法介绍
