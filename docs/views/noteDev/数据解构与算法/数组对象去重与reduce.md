@@ -49,7 +49,7 @@ permalink: /20200602
 ::: tip
 reduce为数组中的每一个元素依次执行callback函数，不包括数组中被删除或从未被赋值的元素
 :::
-基于对这句话，我的理解是，就算你删除了数组中的某一项，他指针是不会偏移的，还是记录的之前那个数组，所以我们就不用去做指针偏移和长度判断条件了，省了不少事。
+这句话应该是理解reduce执行流程的最重要的一句话了，为数组的每个元素执行callback，数组元素有多少个就执行多少次callback，不过如果使用的方法里操作了原数组，指针还是会偏移的，在这里还是要提一句，其实为了避免出现不必要的麻烦，我们还是最好使用那些不操作原数组的方法，做一个一等公民（纯函数）。
 先看看reduce的参数和语法。
 ::: tip
 arr.reduce(callback(accumulator, currentValue[, index[, array]])[, initialValue])
@@ -72,8 +72,8 @@ arr.reduce(callback(accumulator, currentValue[, index[, array]])[, initialValue]
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;作为第一次调用callback函数时的第一个参数的值。
   </p>
 :::
-reduce代码实现去重：
 
+reduce另一个方法实现去重，参考mdn的，这个方法就没有指针偏移的烦恼：
 ```js
     console.time("time")
     let result =  arr.sort((a, b) => a.id - b.id).reduce((acc,cur)=>{
@@ -81,7 +81,7 @@ reduce代码实现去重：
         acc.push(cur);
       }
       return acc;
-    },[arr[0]])
+    },[])
     console.timeEnd("time") //取最中间值 0.27ms
 ```
-太强了，reduce，比上面的快了接近一倍，我就是reduce死忠粉
+我想用reduce也用上面的指针加排序的方案来做的，但是发现，reduce的index不能更改，只能循环下去，for循环也是一样，不能更改，即使在外面定义的变量也还是指针只能++，减不了，因为用的不一样的方法，所以时间复杂度比不了，但是while可以做指针偏移，看个人喜欢吧
