@@ -66,4 +66,4 @@ permalink: /20200604
   }
 ```
 
-大家可以去我这里看我写的小demo演示效果<a href="http://106.53.242.20:8082/" target="_Blank">过场动画demo</a>，源码也在那里了。
+大家可以去我这里看我写的小demo演示效果<a href="http://phy-lei.cn:8082/" target="_Blank">过场动画demo</a>，源码也在那里了。
