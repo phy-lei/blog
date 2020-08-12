@@ -1,5 +1,5 @@
 ---
-title: memo+hook性能优化
+title: React.memo+hook性能优化
 date: 2020-08-12
 tags:
  - react
@@ -11,7 +11,7 @@ permalink: /20200812
 ## 写在前面的话
 每当我们新页面打开的时候，父组件一旦更新，子组件也会跟着更新，有的时候，子组件的props并没有改变，我们也不需要它重新渲染，在以前class组件中，我们会用到PureComponent和shouldComponentUpdate，如今函数组件越来越趋向成熟，函数组件中也有了解决方案，memo是用在函数组件的hook，而且写法上也更加的优雅，并且还有其他的memoized hook来让我们记忆当前包裹的函数，react用到这一点来去判断被包裹的组件需不需要重新渲染。
 
-### memo
+### React.memo
 memo的使用方式很简单，接收2个参数，第一个是包裹的函数组件名，第二个是areEqual是否需要重新渲染，memo为高阶组件，它与PureComponent非常相似，但只适用于函数组件，而不适用 class 组件。
 
 ```js
@@ -34,7 +34,7 @@ export default React.memo(MyComponent, areEqual);
 当areEqual为true的时候，react在编译的时候，遇到props渲染的东西的时候，都是拿之前的值来渲染，就不执行这段代码了，直接next，而不是又来执行一遍有props的代码，因为有memoized hook，所以就更好的去读取记忆中的值了。
 :::
 
-### memoized hook
+### Memoized hook
 memoized hook中有useMemo，useCallback，当父组件传过来的值中有函数的话，我们应该要用useCallback包裹，如果不用useCallback包裹，那么memo包裹的组件，还是会一直渲染，值的话可以用useMemo包裹，因为他们的第二个参数都是一个依赖项数组。
 ```js
 
