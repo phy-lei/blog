@@ -9,7 +9,7 @@ permalink: /20200812
 ---
 
 ## 写在前面的话
-每当我们新页面打开的时候，父组件一旦更新，子组件也会跟着更新，有的时候，子组件的props并没有改变，我们也不需要它重新渲染，在以前class组件中，我们会用到PureComponent和shouldComponentUpdate，如今函数组件越来越趋向成熟，函数组件中也有了解决方案，memo是用在函数组件的hook，而且写法上也更加的优雅，并且还有其他的memoized hook来让我们记忆当前包裹的函数，react用到这一点来去判断被包裹的组件需不需要重新渲染。
+在react中，每当我们新页面打开的时候，父组件一旦更新，子组件也会跟着更新，有的时候，子组件的props并没有改变，我们也不需要它重新渲染，在以前class组件中，我们会用到PureComponent和shouldComponentUpdate，如今函数组件越来越趋向成熟，函数组件中也有了解决方案，memo是用在函数组件的hook，而且写法上也更加的优雅，并且还有其他的memoized hook来让我们记忆当前包裹的函数，react用到这一点来去判断被包裹的组件需不需要重新渲染。
 
 ### React.memo
 memo的使用方式很简单，接收2个参数，第一个是包裹的函数组件名，第二个是areEqual是否需要重新渲染，memo为高阶组件，它与PureComponent非常相似，但只适用于函数组件，而不适用 class 组件。
