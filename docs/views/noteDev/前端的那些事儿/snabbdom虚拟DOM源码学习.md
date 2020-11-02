@@ -22,7 +22,7 @@ Snabbdom由一个非常简单，高性能和可扩展的内核组成，仅约200
 |── package.json       
 └── proxy.config.js     
 ```
-1.使用虚拟dom创建一个div标签
+1.使用虚拟dom创建一个div标签：
 ```js
 import { h } from 'snabbdom/build/package/h.js'
 import { init } from 'snabbdom/build/package/init.js'
