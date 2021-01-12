@@ -27,59 +27,59 @@ self.addEventListener('message', (event) => {
 self.__precacheManifest = [
   {
     "url": "20200415/index.html",
-    "revision": "bdaef3a3be31c87c6b6a79373f5add7f"
+    "revision": "c03d35f4b5adc7b9280a9fcafca6e50f"
   },
   {
     "url": "20200526/index.html",
-    "revision": "b8699800185f07ea570c6d55de65dd89"
+    "revision": "8b1db2148cc40acfcbf48922565d7839"
   },
   {
     "url": "20200528/index.html",
-    "revision": "d8d634f91ee2830855584aab0e55b8e1"
+    "revision": "b9640484afede968ac467797b1e2ed08"
   },
   {
     "url": "20200529/index.html",
-    "revision": "071f39cfae3f71b3661d9c0eb634990f"
+    "revision": "b363dd2d12ef7890e4557b01a8178c07"
   },
   {
     "url": "20200601/index.html",
-    "revision": "0e1d0de8356037c1b676591bc2d5bf81"
+    "revision": "c705422834f5993556546b7c65c712d6"
   },
   {
     "url": "20200602/index.html",
-    "revision": "ec85b3d22651fe38ade8a30f44878aea"
+    "revision": "39553a9cb409760214b7432f6a975dbd"
   },
   {
     "url": "20200604/index.html",
-    "revision": "7eb41c85fc481c9413c05df5691380d4"
+    "revision": "50ff8e41d9edac3ddae4a522e93b4c7f"
   },
   {
     "url": "20200612/index.html",
-    "revision": "ac33973f69367f8568274d18f4d700da"
+    "revision": "44d6a10196daa0454ee7e279081e6152"
   },
   {
     "url": "20200720/index.html",
-    "revision": "59ea11c21e5c5bed3c2e3cc3d74a4dc0"
+    "revision": "56f921c17322af25bcac32b3e950dac9"
   },
   {
     "url": "20200804/index.html",
-    "revision": "b2bf29dec19c11dad247deda2737a083"
+    "revision": "52d71f87f1e130554329c904bfca578d"
   },
   {
     "url": "20200812/index.html",
-    "revision": "d18cd98d616e368a427852ca581d21a8"
+    "revision": "a96f587a472ba992088727b6e62ed1c8"
   },
   {
     "url": "20201013/index.html",
-    "revision": "a80756979babdb184d1a6cc17e54da7e"
+    "revision": "948a1833d6f2d7ed5866002f8223a794"
   },
   {
     "url": "20210112/index.html",
-    "revision": "a69a730724778322604c456123289d6f"
+    "revision": "82413f0290e8b2e0e93c369d5d3681ea"
   },
   {
     "url": "404.html",
-    "revision": "4a453868958b0d65759352982dbc9e00"
+    "revision": "088391d8d4196f184500d85ae739a3e0"
   },
   {
     "url": "assets/121501/1.png",
@@ -158,8 +158,8 @@ self.__precacheManifest = [
     "revision": "a3f80e6eeb0f9d96b7387d0f5494d82c"
   },
   {
-    "url": "assets/js/20.beb3a5bd.js",
-    "revision": "798ce498bb0e2f1e4caf1db0f2790396"
+    "url": "assets/js/20.eebc22d1.js",
+    "revision": "08e91a66aaf741e6ba065f8866f7cdcd"
   },
   {
     "url": "assets/js/21.ad7dc282.js",
@@ -218,8 +218,8 @@ self.__precacheManifest = [
     "revision": "fc62a4b21369b026bd2a2ac098a58732"
   },
   {
-    "url": "assets/js/app.b9fd51cf.js",
-    "revision": "313c91f9acaa02c240f0c398daf2763f"
+    "url": "assets/js/app.3f77669b.js",
+    "revision": "220ef801fe25db8ccae7c22f6e297f48"
   },
   {
     "url": "avatar.jpg",
@@ -235,35 +235,35 @@ self.__precacheManifest = [
   },
   {
     "url": "categories/article/index.html",
-    "revision": "b2cbf18676af6457ca1b9a9078f46bb9"
+    "revision": "2b4c43637d508abd6acb5e21cf86f8e7"
   },
   {
     "url": "categories/css/index.html",
-    "revision": "aaefaf7fea80b85dba22dc11bfa96ea0"
+    "revision": "573083d82fc2667c2da6aa86d3ff9602"
   },
   {
     "url": "categories/index.html",
-    "revision": "a651f051bc918193bd57ab485181b8e0"
+    "revision": "bc1dd5296fca7d28f6ddbbdc636fea84"
   },
   {
     "url": "categories/linux/index.html",
-    "revision": "efeed903e9ff7ef05dcd84022fe7a527"
+    "revision": "d3d33e914b2bdfe693dc06bb64bd52b3"
   },
   {
     "url": "categories/react/index.html",
-    "revision": "81322aecafd53904238481e840a10f7b"
+    "revision": "434de54da614c894d261d7f2139cbc25"
   },
   {
     "url": "categories/vuepress/index.html",
-    "revision": "0b1f5f30071c91adc2a285451c4cc15d"
+    "revision": "d04a1f08533612bdfdad62cbcb527280"
   },
   {
     "url": "categories/前端的那些事儿/index.html",
-    "revision": "ee876a154a257aea94c4e990e450dbe3"
+    "revision": "77ac4702c76ff7f06402159a285f6f25"
   },
   {
     "url": "categories/数据结构与算法/index.html",
-    "revision": "885d63b577da5c7b554957998ae3cefb"
+    "revision": "381c135d89e92c15575004d8419adf6a"
   },
   {
     "url": "hero.jpg",
@@ -307,7 +307,7 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "34f6f23739c77b2abbc0f13a7c54a41d"
+    "revision": "00ea7df74bc39948ab323c34752a61c9"
   },
   {
     "url": "logo.png",
@@ -319,51 +319,51 @@ self.__precacheManifest = [
   },
   {
     "url": "tag/css/index.html",
-    "revision": "436be1021c93703f4fc9c88143923e0d"
+    "revision": "e6e047146c7094c23fc60eb7d8b262b9"
   },
   {
     "url": "tag/index.html",
-    "revision": "033a9264a3dbb90340d846cd64427924"
+    "revision": "f6688650a63bb0a2fcb1c5e1b8397b55"
   },
   {
     "url": "tag/linux/index.html",
-    "revision": "cf8f71a1953de9015f27f82b8e30ba43"
+    "revision": "6bcff3845922f47c45cac5f5fa74b814"
   },
   {
     "url": "tag/react/index.html",
-    "revision": "1bfd49c1fe67636f11111a640738ed66"
+    "revision": "75f91af1c6d9e990c6c4b10a0b495fa8"
   },
   {
     "url": "tag/tag3/index.html",
-    "revision": "bda19f82e14a5946019b922dbe09c7f7"
+    "revision": "3b89ec31d626383c1ba0abb7998a7fcd"
   },
   {
     "url": "tag/tag4/index.html",
-    "revision": "2e1dc4072a4bad309bf76283b34478c9"
+    "revision": "6b980cface8d47945b416392e2b4b3ba"
   },
   {
     "url": "tag/vuepress/index.html",
-    "revision": "94fb689cc3ebe6500e4c1546ddecaaad"
+    "revision": "71e2cdc49568a36aa66bc37fcee68090"
   },
   {
     "url": "tag/前端的那些事儿/index.html",
-    "revision": "1b0730991d0e3d46454a0f60ec2fb79c"
+    "revision": "3816a976a97a8ee43f48ae6eda75a6e8"
   },
   {
     "url": "tag/数据结构与算法/index.html",
-    "revision": "3c7db2e74248a7219e4595dad88f7669"
+    "revision": "c3096ed3f961edb30e79c1ad13d23961"
   },
   {
     "url": "timeline/index.html",
-    "revision": "af54362df31662ec23e19606f701c18e"
+    "revision": "8309ffee9639ce0e00bcd819000e4ddb"
   },
   {
     "url": "views/article/2016/121501.html",
-    "revision": "32c7a817eb1ffd26f3e540876471eff5"
+    "revision": "6aa9edca38ffedb67b4183c98ded22b2"
   },
   {
     "url": "views/article/2017/092101.html",
-    "revision": "7f612d8e2db6572a1afccb988bf02346"
+    "revision": "8d7212a46c379a57160320c483b3efaf"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
