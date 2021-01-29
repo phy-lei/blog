@@ -12,9 +12,9 @@ permalink: /20210129
 当使用vue的时候，免不了我们的hxd（vue-router），作为单页面应用的典型，vue-router可是做了很大贡献，对比以前传统的多页面应用，每一个链接都是超链接，对应的html，一般都是后端返回该路径下的html，而单页面应用，是前端匹配路径，返回对应的html，说白了，vue-router仅仅是组件的映射表，当我仔细思考这么一段话时，发出感叹，是啊，仅仅只是一个映射而已。
 
 ### 2种模式
-vue-router有2种模式，一种是默认的hash模式，另外一种是history模式，这2种模式最大的区别就是，路径是否有#号。
-hash模式：它的特点在于：hash 虽然出现在 URL 中，但不会被包括在 HTTP 请求中，对后端完全没有影响，因此改变 hash 不会重新加载页面。
-history模式： 利用了 HTML5 History Interface 中新增的 pushState() 和 replaceState() 方法。这两个方法应用于浏览器的历史记录栈，在当前已有的 back、forward、go 的基础之上，它们提供了对历史记录进行修改的功能。只是当它们执行修改时，虽然改变了当前的 URL，但浏览器不会立即向后端发送请求。
+vue-router有2种模式，一种是默认的hash模式，另外一种是history模式，这2种模式最大的区别就是，路径是否有#号。</br>
+hash模式：它的特点在于：hash 虽然出现在 URL 中，但不会被包括在 HTTP 请求中，对后端完全没有影响，因此改变 hash 不会重新加载页面。</br>
+history模式：利用了 HTML5 History Interface 中新增的 pushState() 和 replaceState() 方法。这两个方法应用于浏览器的历史记录栈，在当前已有的 back、forward、go 的基础之上，它们提供了对历史记录进行修改的功能。只是当它们执行修改时，虽然改变了当前的 URL，但浏览器不会立即向后端发送请求。
 
 ```js 
   // router.js中设置mode
@@ -25,7 +25,7 @@ history模式： 利用了 HTML5 History Interface 中新增的 pushState() 和 
   })
 ```
 
-vue-router就是利用这个特性，他的push方法其实就是pushState方法。贴一下他的push
+vue-router就是利用这个特性，他的push方法其实就是pushState方法。贴一下他的push。
 ```js 
  const history = window.history
   try {
