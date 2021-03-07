@@ -2,7 +2,7 @@
 const secret = require("./secret.js")
 console.log(process.env.NODE_ENV);
 module.exports = {
-  "base": "/blog/",
+  "base": '/blog/',
   "title": "phy-lei",
   "description": "残留枝头的樱花瓣，也终将迎来凋零的命运",
   "dest": "public",
@@ -112,7 +112,9 @@ module.exports = {
   },
   "markdown": {
     "lineNumbers": false,
-    "highlightLines": true
+    "highlightLines": true,
+    
+    
   },
   "plugins":{
     '@vuepress/google-analytics':{
@@ -123,6 +125,7 @@ module.exports = {
       updatePopup: true
     }
   },
+
   "define": {
     "process.env.NODE_ENV": process.env.NODE_ENV,
   }

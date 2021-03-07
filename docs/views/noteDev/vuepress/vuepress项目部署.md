@@ -42,7 +42,7 @@ cd -
 
 脚本执行完后，会将自己的代码推送到自己的仓库，并生成一个gh-pages分支，这个分支会去将master分支构建出来，然后点击github的Settings，滑到下面会看到
 
-![image-20200524181738869](/blog/assets/200526/1.png)
+<img :src="$withBase('/assets/200526/1.png')" alt="">
 
 然后就会有一个你项目网站的地址已经挂载到github page服务器上了，并可以在线上访问你的项目了
 
@@ -54,19 +54,19 @@ cd -
 
 用github登录好后，选择好你项目上的分支
 
-![image-20200524182432730](/blog/assets/200526/2.png)
+<img :src="$withBase('/assets/200526/2.png')" alt="">
 
 点击进去后，在右边，有个setting
 
-![image-20200524182511182](/blog/assets/200526/3.png)
+<img :src="$withBase('/assets/200526/3.png')" alt="">
 
 然后填好token，至于token，是在自己github上新建一个
 
-![image-20200524182542340](/blog/assets/200526/4.png)
+<img :src="$withBase('/assets/200526/4.png')" alt="">
 
 github生成token，关联起来
 
-![image-20200524182736046](/blog/assets/200526/5.png)
+<img :src="$withBase('/assets/200526/5.png')" alt="">
 
 全部设置好后，在项目上新建一个.travis.yml文件，这个文件是给travis识别后，触发里面的命令的
 
