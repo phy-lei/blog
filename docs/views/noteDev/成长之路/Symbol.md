@@ -1,5 +1,5 @@
 ---
-title: 成长之路
+title: Symbol的常用内置符号
 date: 2021-05-02
 tags:
  - 成长之路
@@ -55,7 +55,7 @@ permalink: /20210502
   f instanceof Foo //true
   console.log(Foo[Symbol.hasInstance](f))  //true
 ```
-人为改变instanceof
+人为改变instanceof:
 ```js
   class Bar {
     static [Symbol.hasInstance] () {
