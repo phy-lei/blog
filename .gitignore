@@ -6,5 +6,8 @@
 # production
 /public
 
+# production
+/public.zip
+
 #私密信息
 # secret.js
