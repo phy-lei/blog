@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>装饰器 | phy-lei</title>
+    <meta name="generator" content="VuePress 1.5.0">
+    <link rel="icon" href="/blog/favicon3.ico">
+    <link rel="manifest" href="/blog/manifest.json">
+    <link rel="apple-touch-icon" href="/blog/icons/icon-152x152.png">
+    <link rel="mask-icon" href="/blog/icons/safari-pinned-tab.svg" color="#3eaf7c">
+    <meta name="description" content="残留枝头的樱花瓣，也终将迎来凋零的命运">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="msapplication-TileImage" content="/icons/icon-144x144.png">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <link rel="preload" href="/blog/assets/css/0.styles.772212fd.css" as="style"><link rel="preload" href="/blog/assets/js/app.f89043e2.js" as="script"><link rel="preload" href="/blog/assets/js/3.85657320.js" as="script"><link rel="preload" href="/blog/assets/js/1.51d2f36d.js" as="script"><link rel="preload" href="/blog/assets/js/28.8781322e.js" as="script"><link rel="preload" href="/blog/assets/js/9.15c99a4c.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.f836cba1.js"><link rel="prefetch" href="/blog/assets/js/11.4f6187af.js"><link rel="prefetch" href="/blog/assets/js/12.1b857093.js"><link rel="prefetch" href="/blog/assets/js/13.d823568a.js"><link rel="prefetch" href="/blog/assets/js/14.63d09ad0.js"><link rel="prefetch" href="/blog/assets/js/15.bda9a92d.js"><link rel="prefetch" href="/blog/assets/js/16.5e5443ff.js"><link rel="prefetch" href="/blog/assets/js/17.de6a5b76.js"><link rel="prefetch" href="/blog/assets/js/18.5cb611ef.js"><link rel="prefetch" href="/blog/assets/js/19.a8cc77e2.js"><link rel="prefetch" href="/blog/assets/js/20.eebc22d1.js"><link rel="prefetch" href="/blog/assets/js/21.579a6fec.js"><link rel="prefetch" href="/blog/assets/js/22.b742108a.js"><link rel="prefetch" href="/blog/assets/js/23.10f7aac8.js"><link rel="prefetch" href="/blog/assets/js/24.eaa9fcbc.js"><link rel="prefetch" href="/blog/assets/js/25.7d5c3001.js"><link rel="prefetch" href="/blog/assets/js/26.f7ffd602.js"><link rel="prefetch" href="/blog/assets/js/27.cb16278f.js"><link rel="prefetch" href="/blog/assets/js/29.b17507f0.js"><link rel="prefetch" href="/blog/assets/js/30.9adabb82.js"><link rel="prefetch" href="/blog/assets/js/31.77fc9330.js"><link rel="prefetch" href="/blog/assets/js/32.5bff5188.js"><link rel="prefetch" href="/blog/assets/js/4.1cf9f4e2.js"><link rel="prefetch" href="/blog/assets/js/5.66c8e8a2.js"><link rel="prefetch" href="/blog/assets/js/6.ce1903cd.js"><link rel="prefetch" href="/blog/assets/js/7.ed70543c.js"><link rel="prefetch" href="/blog/assets/js/8.6cf24346.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.772212fd.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-19557b78><div data-v-19557b78><div id="loader-wrapper" class="loading-wrapper" data-v-d48f4d20 data-v-19557b78 data-v-19557b78><div class="loader-main" data-v-d48f4d20><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-64685f0e data-v-19557b78 data-v-19557b78><h3 class="title" style="display:none;" data-v-64685f0e data-v-64685f0e>phy-lei</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-64685f0e data-v-64685f0e><input type="password" value="" data-v-64685f0e> <span data-v-64685f0e>Konck! Knock!</span> <button data-v-64685f0e>OK</button></label> <div class="footer" style="display:none;" data-v-64685f0e data-v-64685f0e><span data-v-64685f0e><i class="iconfont reco-theme" data-v-64685f0e></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-64685f0e>vuePress-theme-reco</a></span> <span data-v-64685f0e><i class="iconfont reco-copyright" data-v-64685f0e></i> <a data-v-64685f0e><span data-v-64685f0e>phy-lei</span>
+            
+          <!---->
+          2021
+        </a></span></div></div> <div class="hide" data-v-19557b78><header class="navbar" data-v-19557b78><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><img src="/blog/mine.jpg" alt="phy-lei" class="logo"> <span class="site-name">phy-lei</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/" class="nav-link"><i class="iconfont reco-home"></i>
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      Category
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/categories/article/" class="nav-link"><i class="iconfont undefined"></i>
+  article
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/css/" class="nav-link"><i class="iconfont undefined"></i>
+  css
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/linux/" class="nav-link"><i class="iconfont undefined"></i>
+  linux
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/react/" class="nav-link"><i class="iconfont undefined"></i>
+  react
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/vue/" class="nav-link"><i class="iconfont undefined"></i>
+  vue
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/vuepress/" class="nav-link"><i class="iconfont undefined"></i>
+  vuepress
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/前端的那些事儿/" class="nav-link"><i class="iconfont undefined"></i>
+  前端的那些事儿
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/成长之路/" class="nav-link"><i class="iconfont undefined"></i>
+  成长之路
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/数据结构与算法/" class="nav-link"><i class="iconfont undefined"></i>
+  数据结构与算法
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/面试/" class="nav-link"><i class="iconfont undefined"></i>
+  面试
+</a></li></ul></div></div><div class="nav-item"><a href="/blog/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  Tag
+</a></div><div class="nav-item"><a href="/blog/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      Contact
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/phy-lei" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-19557b78></div> <aside class="sidebar" data-v-19557b78><div class="personal-info-wrapper" data-v-b038cec6><img src="/blog/mine.jpg" alt="author-avatar" class="personal-img" data-v-b038cec6> <h3 class="name" data-v-b038cec6>
+    phy-lei
+  </h3> <div class="num" data-v-b038cec6><div data-v-b038cec6><h3 data-v-b038cec6>20</h3> <h6 data-v-b038cec6>Article</h6></div> <div data-v-b038cec6><h3 data-v-b038cec6>11</h3> <h6 data-v-b038cec6>Tag</h6></div></div> <hr data-v-b038cec6></div> <nav class="nav-links"><div class="nav-item"><a href="/blog/" class="nav-link"><i class="iconfont reco-home"></i>
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      Category
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/categories/article/" class="nav-link"><i class="iconfont undefined"></i>
+  article
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/css/" class="nav-link"><i class="iconfont undefined"></i>
+  css
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/linux/" class="nav-link"><i class="iconfont undefined"></i>
+  linux
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/react/" class="nav-link"><i class="iconfont undefined"></i>
+  react
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/vue/" class="nav-link"><i class="iconfont undefined"></i>
+  vue
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/vuepress/" class="nav-link"><i class="iconfont undefined"></i>
+  vuepress
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/前端的那些事儿/" class="nav-link"><i class="iconfont undefined"></i>
+  前端的那些事儿
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/成长之路/" class="nav-link"><i class="iconfont undefined"></i>
+  成长之路
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/数据结构与算法/" class="nav-link"><i class="iconfont undefined"></i>
+  数据结构与算法
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/面试/" class="nav-link"><i class="iconfont undefined"></i>
+  面试
+</a></li></ul></div></div><div class="nav-item"><a href="/blog/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  Tag
+</a></div><div class="nav-item"><a href="/blog/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      Contact
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/phy-lei" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>装饰器</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/20210507/#什么是装饰器" class="sidebar-link">什么是装饰器</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/20210507/#code-example" class="sidebar-link">code-example</a></li><li class="sidebar-sub-header"><a href="/blog/20210507/#注解-anotation" class="sidebar-link">注解-anotation</a></li><li class="sidebar-sub-header"><a href="/blog/20210507/#实现koa-router装饰器定义请求方式" class="sidebar-link">实现koa-router装饰器定义请求方式</a></li></ul></li></ul></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-64685f0e data-v-19557b78><h3 class="title" style="display:none;" data-v-64685f0e data-v-64685f0e>装饰器</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-64685f0e data-v-64685f0e><input type="password" value="" data-v-64685f0e> <span data-v-64685f0e>Konck! Knock!</span> <button data-v-64685f0e>OK</button></label> <div class="footer" style="display:none;" data-v-64685f0e data-v-64685f0e><span data-v-64685f0e><i class="iconfont reco-theme" data-v-64685f0e></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-64685f0e>vuePress-theme-reco</a></span> <span data-v-64685f0e><i class="iconfont reco-copyright" data-v-64685f0e></i> <a data-v-64685f0e><span data-v-64685f0e>phy-lei</span>
+            
+          <!---->
+          2021
+        </a></span></div></div> <div data-v-19557b78><main class="page"><div class="page-title" style="display:none;"><h1>装饰器</h1> <hr> <div data-v-484a899e><i class="iconfont reco-account" data-v-484a899e><span data-v-484a899e>phy-lei</span></i> <i class="iconfont reco-date" data-v-484a899e><span data-v-484a899e>2021-05-07</span></i> <!----> <i class="iconfont reco-tag tags" data-v-484a899e><span class="tag-item" data-v-484a899e>
+      成长之路
+    </span></i></div></div> <div class="theme-reco-content content__default" style="display:none;"><h2 id="什么是装饰器"><a href="#什么是装饰器" class="header-anchor">#</a> 什么是装饰器</h2> <p>装饰器模式（Decorator Pattern）允许向一个现有的对象添加新的功能，同时又不改变其结构。这种类型的设计模式属于结构型模式，它是作为现有的类的一个包装。这种模式创建了一个装饰类，用来包装原有的类，并在保持类方法签名完整性的前提下，提供了额外的功能。目前装饰器的使用仅在ts中支持，而且还是一个新特性，要开启装饰器模式的话，要在tsconfig.json配置，配置如下:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token punctuation">{</span>
+  <span class="token string">&quot;compilerOptions&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token string">&quot;outDir&quot;</span><span class="token operator">:</span> <span class="token string">&quot;./dist&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;target&quot;</span><span class="token operator">:</span> <span class="token string">&quot;es2017&quot;</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;module&quot;</span><span class="token operator">:</span> <span class="token string">&quot;commonjs&quot;</span><span class="token punctuation">,</span><span class="token comment">//组织代码⽅式</span>
+    <span class="token string">&quot;sourceMap&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;moduleResolution&quot;</span><span class="token operator">:</span> <span class="token string">&quot;node&quot;</span><span class="token punctuation">,</span> <span class="token comment">// 模块解决策略</span>
+    <span class="token string">&quot;experimentalDecorators&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token comment">// 开启装饰器定义</span>
+    <span class="token string">&quot;allowSyntheticDefaultImports&quot;</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token comment">// 允许es6⽅式import</span>
+    <span class="token string">&quot;lib&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;es2015&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;typeRoots&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;./node_modules/@types&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;include&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;src/**/*&quot;</span><span class="token punctuation">]</span> 
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="code-example"><a href="#code-example" class="header-anchor">#</a> code-example</h3> <p>首先，定义一个日志打印的方法：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">class</span> <span class="token class-name">Log</span> <span class="token punctuation">{</span>
+    <span class="token function">print</span><span class="token punctuation">(</span><span class="token parameter">msg</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>msg<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">const</span> log <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Log</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+log<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">'hello'</span><span class="token punctuation">)</span>
+</code></pre></div><p>现在是打印什么就是什么，那么我想要输入'hello' =&gt; '[hello]'，加多个中括号，看看怎么做？</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> <span class="token function-variable function">dec</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">target<span class="token punctuation">,</span>property</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 先存储一下方法</span>
+  <span class="token keyword">const</span> old <span class="token operator">=</span> target<span class="token punctuation">.</span>prototype<span class="token punctuation">[</span>property<span class="token punctuation">]</span>
+  target<span class="token punctuation">.</span>prototype<span class="token punctuation">[</span>property<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token parameter">msg</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      msg <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">[</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>msg<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">]</span><span class="token template-punctuation string">`</span></span>
+      <span class="token function">old</span><span class="token punctuation">(</span>msg<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token function">dec</span><span class="token punctuation">(</span>Log<span class="token punctuation">,</span> <span class="token string">'print'</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> log <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Log</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+log<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">'hello'</span><span class="token punctuation">)</span> <span class="token comment">//'[hello]'</span>
+</code></pre></div><p>接下来，如果我还想实现一个新的功能呢，需要输入'hello' =&gt; 'phy: hello'，我们又要怎么做呢，可能会有人说在拼一下啊，简单msg = <code>'phy:${msg}'</code>，这样确实是可行，但是如果phy是变量的话，可能又需要新增一个参数，但是除了新增参数外，我们可以将dec升阶，我们看一下：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> <span class="token function-variable function">createDec</span> <span class="token operator">=</span> <span class="token parameter">friend</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span><span class="token parameter">target<span class="token punctuation">,</span>property</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 先存储一下方法</span>
+  <span class="token keyword">const</span> old <span class="token operator">=</span> target<span class="token punctuation">.</span>prototype<span class="token punctuation">[</span>property<span class="token punctuation">]</span>
+  target<span class="token punctuation">.</span>prototype<span class="token punctuation">[</span>property<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token parameter">msg</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      msg <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>friend<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>msg<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span>
+      <span class="token function">old</span><span class="token punctuation">(</span>msg<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> dec <span class="token operator">=</span> <span class="token function">createDec</span><span class="token punctuation">(</span><span class="token string">'phy'</span><span class="token punctuation">)</span>
+<span class="token function">dec</span><span class="token punctuation">(</span>Log<span class="token punctuation">,</span> <span class="token string">'print'</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> log <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Log</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+log<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">'hello'</span><span class="token punctuation">)</span> <span class="token comment">//'phy: hello'</span>
+</code></pre></div><p>升阶后，变成了高阶工厂，用的函数式写法，看起来也比较简洁，有的时候，升阶比新增参数的复用性更好。</p> <h3 id="注解-anotation"><a href="#注解-anotation" class="header-anchor">#</a> 注解-anotation</h3> <p>在ts中，我们一般使用@decorate的语法去注解，类似</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">class</span> <span class="token class-name">Log</span> <span class="token punctuation">{</span>
+  @decorate <span class="token comment">//anotation注解风格的装饰器</span>
+  <span class="token function">print</span><span class="token punctuation">(</span><span class="token parameter">msg</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>msg<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>那么这个decorate是什么东西呢，通过上面的例子，其实我们已经发现，装饰器，其实就是先执行一段函数，以此来达到需要修饰的方法进行扩展，那么decorate其实就是一个函数，而在ts中，这个decorate是这么定义的：</p> <div class="language-js extra-class"><pre class="language-js"><code> <span class="token comment">/**
+   * @params target: 目标类Log
+   * @params property: 修饰的方法print
+   * @params descriptor: 属性描述符，defineProperty
+  */</span>
+<span class="token keyword">function</span> <span class="token function">decorate</span><span class="token punctuation">(</span><span class="token parameter">target<span class="token punctuation">,</span> property<span class="token punctuation">,</span> descriptor</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 不再会用原型链去做 还可以防止污染原型链</span>
+  <span class="token keyword">const</span> old <span class="token operator">=</span> descriptor<span class="token punctuation">.</span>value
+  descriptor<span class="token punctuation">.</span><span class="token function-variable function">value</span> <span class="token operator">=</span> <span class="token parameter">msg</span> <span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+    msg <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">[</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>msg<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">]</span><span class="token template-punctuation string">`</span></span>
+    <span class="token keyword">return</span> <span class="token function">old</span><span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>msg<span class="token punctuation">]</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> descriptor
+<span class="token punctuation">}</span>
+</code></pre></div><p>然后再经由anotation注解:</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> <span class="token function-variable function">anotation</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">target<span class="token punctuation">,</span> property<span class="token punctuation">,</span> decorate</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> descriptor <span class="token operator">=</span> <span class="token function">decorate</span><span class="token punctuation">(</span>
+    target<span class="token punctuation">.</span>prototype<span class="token punctuation">,</span>
+    property<span class="token punctuation">,</span>
+    Object<span class="token punctuation">.</span><span class="token function">getOwnPropertyDescriptor</span><span class="token punctuation">(</span>target<span class="token punctuation">.</span>prototype<span class="token punctuation">,</span> property<span class="token punctuation">)</span>
+  <span class="token punctuation">)</span>
+  Object<span class="token punctuation">.</span><span class="token function">defineProperty</span><span class="token punctuation">(</span>target<span class="token punctuation">.</span>prototype<span class="token punctuation">,</span> property<span class="token punctuation">,</span> descriptor<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token function">anotation</span><span class="token punctuation">(</span>Log<span class="token punctuation">,</span> <span class="token string">'print'</span><span class="token punctuation">,</span> decorate<span class="token punctuation">)</span>
+</code></pre></div><h3 id="实现koa-router装饰器定义请求方式"><a href="#实现koa-router装饰器定义请求方式" class="header-anchor">#</a> 实现koa-router装饰器定义请求方式</h3> <p>平常我们写路由定义的时候都是router.get(path,cb)，这么去定义，那么如果使用装饰器的话，类似nest那种写法：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">class</span> <span class="token class-name">User</span> <span class="token punctuation">{</span> 
+  @<span class="token keyword">get</span><span class="token punctuation">(</span><span class="token string">'/list'</span><span class="token punctuation">)</span>
+  <span class="token keyword">async</span> <span class="token function">list</span><span class="token punctuation">(</span><span class="token parameter">ctx<span class="token operator">:</span> Koa<span class="token punctuation">.</span>Context</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">//</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>这个又怎么实现呢？一步一步来，utils文件夹下新建一个decorate.ts文件</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> router <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">KoaRouter</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">const</span> <span class="token function-variable function">get</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">path<span class="token operator">:</span> string</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span><span class="token parameter">target<span class="token punctuation">,</span> property</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token comment">//注册</span>
+    router<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>path<span class="token punctuation">,</span> target<span class="token punctuation">[</span>property<span class="token punctuation">]</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>很简单，get方法已经完成，那我们思考一个问题，因为请求方式不仅有get，还有post，put，delete等等，这时候，我们岂不是要复制几串get的方法去修改，这样子，感觉很不优雅，有没有好点的办法呢，对，没错，升价。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> <span class="token function-variable function">method</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">method<span class="token operator">:</span> string</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span><span class="token parameter">path<span class="token operator">:</span> string</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span><span class="token parameter">target<span class="token punctuation">,</span> property</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token comment">//注册</span>
+    router<span class="token punctuation">[</span>method<span class="token punctuation">]</span><span class="token punctuation">(</span>path<span class="token punctuation">,</span> target<span class="token punctuation">[</span>property<span class="token punctuation">]</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">const</span> <span class="token keyword">get</span> <span class="token operator">=</span> <span class="token function">method</span><span class="token punctuation">(</span><span class="token string">'get'</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">const</span> <span class="token keyword">get</span> <span class="token operator">=</span> <span class="token function">method</span><span class="token punctuation">(</span><span class="token string">'post'</span><span class="token punctuation">)</span>
+</code></pre></div><p>这样子是不是优雅多了呀？但是仔细看这段代码，有没有发现什么问题呢，如果熟读函数式编程的大佬，肯定一下子就看出来，这里有个副作用router，router是引用外面的，遵守纯函数的原则，我们有没有什么办法呢，将他变为参数？错，还是升阶，遇事不决，升阶完事，着魔了！</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> <span class="token function-variable function">CreateMethod</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">router<span class="token operator">:</span> KoaRouter</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span><span class="token parameter">method<span class="token operator">:</span> string</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span><span class="token parameter">path<span class="token operator">:</span> string</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">(</span><span class="token parameter">target<span class="token punctuation">,</span> property</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token comment">//注册</span>
+    router<span class="token punctuation">[</span>method<span class="token punctuation">]</span><span class="token punctuation">(</span>path<span class="token punctuation">,</span> target<span class="token punctuation">[</span>property<span class="token punctuation">]</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">const</span> method <span class="token operator">=</span> <span class="token function">CreateMethod</span><span class="token punctuation">(</span>router<span class="token punctuation">)</span>
+
+<span class="token keyword">export</span> <span class="token keyword">const</span> <span class="token keyword">get</span> <span class="token operator">=</span> <span class="token function">method</span><span class="token punctuation">(</span><span class="token string">'get'</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">const</span> <span class="token keyword">get</span> <span class="token operator">=</span> <span class="token function">method</span><span class="token punctuation">(</span><span class="token string">'post'</span><span class="token punctuation">)</span>
+</code></pre></div><div class="custom-block tip"><p>这样就比较完美了，将method变为高阶工厂，很多时候，这种写法比较优雅，比起传参的形式。对于装饰器目前，我理解就这么多，其实像鉴权的实现，也可以用装饰器去实现，装饰器可以拦截你的逻辑，也可以用中间件的思想去实现。</p></div> <p>这样子：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 新增了一个参数，存储中间件</span>
+@<span class="token function">post</span><span class="token punctuation">(</span><span class="token string">'/users'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  middlewares<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">validation</span><span class="token punctuation">(</span>ctx<span class="token operator">:</span> Koa<span class="token punctuation">.</span>Context<span class="token punctuation">,</span> <span class="token function-variable function">next</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> Promise<span class="token operator">&lt;</span>any<span class="token operator">&gt;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token function">add</span><span class="token punctuation">(</span><span class="token parameter">ctx<span class="token operator">:</span> Koa<span class="token punctuation">.</span>Context</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  
+<span class="token punctuation">}</span>
+</code></pre></div></div> <footer class="page-edit" style="display:none;"><!----> <div class="last-updated"><span class="prefix">Last Updated: </span> <span class="time">5/7/2021, 4:04:26 AM</span></div></footer> <!----> <!----></main> <!----></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-44bd5a18 data-v-44bd5a18><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-44bd5a18><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-44bd5a18></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-44bd5a18></path></svg></div><!----></div></div>
+    <script src="/blog/assets/js/app.f89043e2.js" defer></script><script src="/blog/assets/js/3.85657320.js" defer></script><script src="/blog/assets/js/1.51d2f36d.js" defer></script><script src="/blog/assets/js/28.8781322e.js" defer></script><script src="/blog/assets/js/9.15c99a4c.js" defer></script>
+  </body>
+</html>
