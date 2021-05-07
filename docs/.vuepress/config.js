@@ -82,7 +82,7 @@ module.exports = {
       "repo": 'blog',
       "clientId": secret.Vssue_ClientId,
       "clientSecret": secret.Vssue_ClientSecret,
-      "autoCreateIssue": true,
+      "autoCreateIssue": false,
     },
     "logo": "/mine.jpg",
     "search": true,
