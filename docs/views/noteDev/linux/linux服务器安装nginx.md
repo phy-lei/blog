@@ -52,6 +52,7 @@ make install
 cd /usr/local/nginx/sbin</br>
 ./nginx
 :::
+
 ### 8.查看端口使用情况
 ::: tip
 netstat -ntpl
@@ -64,7 +65,13 @@ killall -9 nginx
 :::
 然后再次启动即可
 
-### 9.我的nginx.conf配置
+
+### 9.ngingx 重启命令
+::: tip
+ /usr/local/nginx/sbin/nginx -s reload
+:::
+
+### 10.我的nginx.conf配置
 
 ```conf
   server {
