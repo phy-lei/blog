@@ -77,7 +77,7 @@ process.on('SIGTERM', function () {
 - 内建负载均衡（使用Node cluster 集群模块、子进程）
 - 线程守护，keep alive
 - 0秒停机重载，维护升级的时候不需要停机
-- 现在 Linux (stable) & MacOSx (stable) & Windows (stable).多平台支持
+- 现在 Linux (stable) & MacOSx (stable) & Windows (stable)多平台支持
 - 停止不稳定的进程（避免无限循环）
 - 提供 HTTP API
 :::
