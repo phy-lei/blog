@@ -62,7 +62,10 @@ const action = createAction(myState);
 
 // 用dispath派发action 参考dva的dispatch 支持promise调用
 // eslint-disable-next-line max-len
-const createDispatch = <T>(actionType: any) => ({ type, payload }: DispatchParams): Promise<T> =>
+const createDispatch = <T>(actionType: any) => ({
+  type,
+  payload
+}: DispatchParams): Promise<T> =>
   new Promise(resolve => {
     resolve(actionType[type](payload));
   });
@@ -138,7 +141,9 @@ const initState: IState = {
 };
 
 const reducers: Record<string, any> = {
-  initDialogStateAction: (state: IState) => ({ uid }: Record<string, string>) => {
+  initDialogStateAction: (state: IState) => ({
+    uid
+  }: Record<string, string>) => {
     (state as any)[uid] = {};
     // eslint-disable-next-line no-restricted-syntax
     for (const key in initState) {
@@ -147,11 +152,16 @@ const reducers: Record<string, any> = {
     console.log(state, "state");
   },
 
-  articleStoreHouseDetailAction: (state: IState) => ({ uid, status }: Record<string, string>) => {
+  articleStoreHouseDetailAction: (state: IState) => ({
+    uid,
+    status
+  }: Record<string, string>) => {
     (state as any)[uid].isArticleStoreHouseDetail = status;
   },
 
-  cleanUpCurrentStateAction: (state: IState) => ({ uid }: Record<string, string>) => {
+  cleanUpCurrentStateAction: (state: IState) => ({
+    uid
+  }: Record<string, string>) => {
     delete (state as any)[uid];
     console.log(state, "state");
   }
