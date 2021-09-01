@@ -16,7 +16,7 @@ permalink: /20210901
 ### 使用
 
 因为我习惯使用可视化 git 工具，就已 TortoiseGit 为例子，进入到需要合并的分支 A，然后打开 log 面板:
-<img :src="$withBase('/assets/20210901/01.jpg')" alt="">
+<img :src="$withBase('/assets/20210901/01.png')" alt="">
 
 然后选择好对应的那条 commit，右键打开选项，选择 cherry pick this commit，当然也可以多选多条 comiit 的，框起来就可以，最后按下 continue，就可以了。有冲突解决冲突，当 done 后，就已经合并到该分支的本地了，git push 收工
-<img :src="$withBase('/assets/20210901/02.jpg')" alt="">
+<img :src="$withBase('/assets/20210901/02.png')" alt="">
