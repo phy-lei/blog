@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>记一次compose异步函数函子 | phy-lei</title>
+    <meta name="generator" content="VuePress 1.5.0">
+    <link rel="icon" href="/blog/favicon3.ico">
+    <link rel="manifest" href="/blog/manifest.json">
+    <link rel="apple-touch-icon" href="/blog/icons/icon-152x152.png">
+    <link rel="mask-icon" href="/blog/icons/safari-pinned-tab.svg" color="#3eaf7c">
+    <meta name="description" content="残留枝头的樱花瓣，也终将迎来凋零的命运">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="msapplication-TileImage" content="/icons/icon-144x144.png">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <link rel="preload" href="/blog/assets/css/0.styles.772212fd.css" as="style"><link rel="preload" href="/blog/assets/js/app.6a5ee54d.js" as="script"><link rel="preload" href="/blog/assets/js/3.85657320.js" as="script"><link rel="preload" href="/blog/assets/js/1.51d2f36d.js" as="script"><link rel="preload" href="/blog/assets/js/30.602a730d.js" as="script"><link rel="preload" href="/blog/assets/js/9.15c99a4c.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.26b3bfac.js"><link rel="prefetch" href="/blog/assets/js/11.4f6187af.js"><link rel="prefetch" href="/blog/assets/js/12.1b857093.js"><link rel="prefetch" href="/blog/assets/js/13.d823568a.js"><link rel="prefetch" href="/blog/assets/js/14.63d09ad0.js"><link rel="prefetch" href="/blog/assets/js/15.bda9a92d.js"><link rel="prefetch" href="/blog/assets/js/16.410ca962.js"><link rel="prefetch" href="/blog/assets/js/17.5a25fb46.js"><link rel="prefetch" href="/blog/assets/js/18.cbe4c522.js"><link rel="prefetch" href="/blog/assets/js/19.883925c7.js"><link rel="prefetch" href="/blog/assets/js/20.d31c021b.js"><link rel="prefetch" href="/blog/assets/js/21.cadd2e1e.js"><link rel="prefetch" href="/blog/assets/js/22.46071fb9.js"><link rel="prefetch" href="/blog/assets/js/23.e04e81f8.js"><link rel="prefetch" href="/blog/assets/js/24.6d639456.js"><link rel="prefetch" href="/blog/assets/js/25.c8ebb8fc.js"><link rel="prefetch" href="/blog/assets/js/26.52c0f139.js"><link rel="prefetch" href="/blog/assets/js/27.9eb9b2f9.js"><link rel="prefetch" href="/blog/assets/js/28.15487421.js"><link rel="prefetch" href="/blog/assets/js/29.2c642a8e.js"><link rel="prefetch" href="/blog/assets/js/31.7e69df5d.js"><link rel="prefetch" href="/blog/assets/js/32.38843890.js"><link rel="prefetch" href="/blog/assets/js/33.77ac4cf7.js"><link rel="prefetch" href="/blog/assets/js/34.4180ed08.js"><link rel="prefetch" href="/blog/assets/js/35.a55b3ea6.js"><link rel="prefetch" href="/blog/assets/js/36.2d2901cc.js"><link rel="prefetch" href="/blog/assets/js/37.26a088b6.js"><link rel="prefetch" href="/blog/assets/js/38.92feb45f.js"><link rel="prefetch" href="/blog/assets/js/39.29b2412b.js"><link rel="prefetch" href="/blog/assets/js/4.1cf9f4e2.js"><link rel="prefetch" href="/blog/assets/js/5.66c8e8a2.js"><link rel="prefetch" href="/blog/assets/js/6.ce1903cd.js"><link rel="prefetch" href="/blog/assets/js/7.ed70543c.js"><link rel="prefetch" href="/blog/assets/js/8.6cf24346.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.772212fd.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-19557b78><div data-v-19557b78><div id="loader-wrapper" class="loading-wrapper" data-v-d48f4d20 data-v-19557b78 data-v-19557b78><div class="loader-main" data-v-d48f4d20><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-64685f0e data-v-19557b78 data-v-19557b78><h3 class="title" style="display:none;" data-v-64685f0e data-v-64685f0e>phy-lei</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-64685f0e data-v-64685f0e><input type="password" value="" data-v-64685f0e> <span data-v-64685f0e>Konck! Knock!</span> <button data-v-64685f0e>OK</button></label> <div class="footer" style="display:none;" data-v-64685f0e data-v-64685f0e><span data-v-64685f0e><i class="iconfont reco-theme" data-v-64685f0e></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-64685f0e>vuePress-theme-reco</a></span> <span data-v-64685f0e><i class="iconfont reco-copyright" data-v-64685f0e></i> <a data-v-64685f0e><span data-v-64685f0e>phy-lei</span>
+            
+          <!---->
+          2021
+        </a></span></div></div> <div class="hide" data-v-19557b78><header class="navbar" data-v-19557b78><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><img src="/blog/mine.jpg" alt="phy-lei" class="logo"> <span class="site-name">phy-lei</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/" class="nav-link"><i class="iconfont reco-home"></i>
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      Category
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/categories/article/" class="nav-link"><i class="iconfont undefined"></i>
+  article
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/css/" class="nav-link"><i class="iconfont undefined"></i>
+  css
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/git/" class="nav-link"><i class="iconfont undefined"></i>
+  git
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/linux/" class="nav-link"><i class="iconfont undefined"></i>
+  linux
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/react/" class="nav-link"><i class="iconfont undefined"></i>
+  react
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/vue/" class="nav-link"><i class="iconfont undefined"></i>
+  vue
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/vuepress/" class="nav-link"><i class="iconfont undefined"></i>
+  vuepress
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/前端的那些事儿/" class="nav-link"><i class="iconfont undefined"></i>
+  前端的那些事儿
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/成长之路/" class="nav-link"><i class="iconfont undefined"></i>
+  成长之路
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/数据结构与算法/" class="nav-link"><i class="iconfont undefined"></i>
+  数据结构与算法
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/面试/" class="nav-link"><i class="iconfont undefined"></i>
+  面试
+</a></li></ul></div></div><div class="nav-item"><a href="/blog/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  Tag
+</a></div><div class="nav-item"><a href="/blog/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      Contact
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/phy-lei" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-19557b78></div> <aside class="sidebar" data-v-19557b78><div class="personal-info-wrapper" data-v-b038cec6><img src="/blog/mine.jpg" alt="author-avatar" class="personal-img" data-v-b038cec6> <h3 class="name" data-v-b038cec6>
+    phy-lei
+  </h3> <div class="num" data-v-b038cec6><div data-v-b038cec6><h3 data-v-b038cec6>27</h3> <h6 data-v-b038cec6>Article</h6></div> <div data-v-b038cec6><h3 data-v-b038cec6>12</h3> <h6 data-v-b038cec6>Tag</h6></div></div> <hr data-v-b038cec6></div> <nav class="nav-links"><div class="nav-item"><a href="/blog/" class="nav-link"><i class="iconfont reco-home"></i>
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      Category
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/categories/article/" class="nav-link"><i class="iconfont undefined"></i>
+  article
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/css/" class="nav-link"><i class="iconfont undefined"></i>
+  css
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/git/" class="nav-link"><i class="iconfont undefined"></i>
+  git
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/linux/" class="nav-link"><i class="iconfont undefined"></i>
+  linux
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/react/" class="nav-link"><i class="iconfont undefined"></i>
+  react
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/vue/" class="nav-link"><i class="iconfont undefined"></i>
+  vue
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/vuepress/" class="nav-link"><i class="iconfont undefined"></i>
+  vuepress
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/前端的那些事儿/" class="nav-link"><i class="iconfont undefined"></i>
+  前端的那些事儿
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/成长之路/" class="nav-link"><i class="iconfont undefined"></i>
+  成长之路
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/数据结构与算法/" class="nav-link"><i class="iconfont undefined"></i>
+  数据结构与算法
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/面试/" class="nav-link"><i class="iconfont undefined"></i>
+  面试
+</a></li></ul></div></div><div class="nav-item"><a href="/blog/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  Tag
+</a></div><div class="nav-item"><a href="/blog/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      Contact
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/phy-lei" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>记一次compose异步函数函子</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/20211124/#感想" class="sidebar-link">感想</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/20211124/#compose" class="sidebar-link">compose</a></li><li class="sidebar-sub-header"><a href="/blog/20211124/#compose-ver2-0" class="sidebar-link">compose.ver2.0</a></li><li class="sidebar-sub-header"><a href="/blog/20211124/#compose-ver3-0" class="sidebar-link">compose.ver3.0</a></li></ul></li></ul></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-64685f0e data-v-19557b78><h3 class="title" style="display:none;" data-v-64685f0e data-v-64685f0e>记一次compose异步函数函子</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-64685f0e data-v-64685f0e><input type="password" value="" data-v-64685f0e> <span data-v-64685f0e>Konck! Knock!</span> <button data-v-64685f0e>OK</button></label> <div class="footer" style="display:none;" data-v-64685f0e data-v-64685f0e><span data-v-64685f0e><i class="iconfont reco-theme" data-v-64685f0e></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-64685f0e>vuePress-theme-reco</a></span> <span data-v-64685f0e><i class="iconfont reco-copyright" data-v-64685f0e></i> <a data-v-64685f0e><span data-v-64685f0e>phy-lei</span>
+            
+          <!---->
+          2021
+        </a></span></div></div> <div data-v-19557b78><main class="page"><div class="page-title" style="display:none;"><h1>记一次compose异步函数函子</h1> <hr> <div data-v-484a899e><i class="iconfont reco-account" data-v-484a899e><span data-v-484a899e>phy-lei</span></i> <i class="iconfont reco-date" data-v-484a899e><span data-v-484a899e>2021-11-24</span></i> <!----> <i class="iconfont reco-tag tags" data-v-484a899e><span class="tag-item" data-v-484a899e>
+      前端的那些事儿
+    </span></i></div></div> <div class="theme-reco-content content__default" style="display:none;"><h2 id="感想"><a href="#感想" class="header-anchor">#</a> 感想</h2> <p>上一次写博客还是在上一次，似乎时隔了很久，工作上，埋头苦干，生活上，自闭少年，感情上，难以言喻。闲暇时间也没再去学习，堕落了很多，现在的状态还是没有过多的改变，每天都很忙，但自身的提升，却没有提升多少，昨天写了段代码，一个之前一直没解决的问题，突然之间就解决了，感觉很奇妙，所以很想记录下来。</p> <h3 id="compose"><a href="#compose" class="header-anchor">#</a> compose</h3> <p>在网上有很多实现 compose 的源码，而我之前第一版本的 compose 也仅仅就是对于同步函数的组合，他的外貌长这样：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">/**
+ * fn1(fn2(fn3(path)))
+ * @date 2021-09-08
+ * @param {any} path 初始参数
+ * @param {any} ...fn 步骤函数列表
+ * @returns {any}
+ */</span>
+<span class="token keyword">const</span> <span class="token function-variable function">compose</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">path<span class="token punctuation">,</span> <span class="token operator">...</span>fn</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> fn<span class="token punctuation">.</span><span class="token function">reduce</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">acc<span class="token punctuation">,</span> cur</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token function">cur</span><span class="token punctuation">(</span>acc<span class="token punctuation">)</span><span class="token punctuation">,</span> path<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><div class="custom-block tip"><p>这对于 fn 的数组都是同步的话，这没有任何问题，但是一般场景下，我们很可能 f1，f2 是异步函数，我会优先使用 async await 改写异步代码，使其串行。举个 fn 之中里面的某个 f1。</p></div> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">getUserInfoByOpenId</span><span class="token punctuation">(</span><span class="token parameter">request<span class="token punctuation">,</span> openId</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> res <span class="token operator">=</span> <span class="token keyword">await</span> request<span class="token punctuation">.</span><span class="token function">post</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    url<span class="token operator">:</span> <span class="token string">&quot;/sys/wxLogin&quot;</span><span class="token punctuation">,</span>
+    data<span class="token operator">:</span> <span class="token punctuation">{</span>
+      openId
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>res<span class="token punctuation">.</span>data<span class="token punctuation">.</span>code <span class="token operator">===</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> res<span class="token punctuation">.</span>data<span class="token punctuation">.</span>data<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><div class="custom-block tip"><p>这个 async return 的数据，会作为下一个 f2 的参数，但是试想一下，此时 f2 的参数他是一个什么数据？是的，他此时还是一个 promise，那么能不能把这个 promise 解出来呢，之前的我，一直解不出来，无论试验了多少个奇葩写法，还是一个 promise。</p></div> <h3 id="compose-ver2-0"><a href="#compose-ver2-0" class="header-anchor">#</a> compose.ver2.0</h3> <p>我后来改写了下 compose，将 reduce 的参数改为 async，企图让他能够将上一个的函数返回值 promise 解构出来。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> <span class="token function-variable function">compose</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">path<span class="token punctuation">,</span> <span class="token operator">...</span>fn</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span>
+  fn<span class="token punctuation">.</span><span class="token function">reduce</span><span class="token punctuation">(</span><span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token parameter">acc<span class="token punctuation">,</span> cur</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">await</span> <span class="token function">cur</span><span class="token punctuation">(</span>acc<span class="token punctuation">)</span><span class="token punctuation">,</span> Promise<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>path<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><div class="custom-block tip"><p>然而，打印 acc，还是 promise，问题还是没有解决，我已经渐渐放弃了，还有很多个其他版本，我就不放出来了/(ㄒ o ㄒ)/~~</p></div> <h3 id="compose-ver3-0"><a href="#compose-ver3-0" class="header-anchor">#</a> compose.ver3.0</h3> <p>上一版的 compose 仔细思考代码后，发现 await cur，其实方向错了，我需要解构的是 acc，而不是 cur，自此一个大胆的想法产生了。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">/**
+ * 串行实现异步的compose 我试验了好久 没想到参数里可以用await
+ * @date 2021-11-23
+ * @param {any} request 数据请求器 每个函数都用到的
+ * @param {any} firstParams 初始参数
+ * @param {any} ...fn 步骤函数
+ * @returns {any}
+ */</span>
+<span class="token keyword">const</span> <span class="token function-variable function">compose</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> request<span class="token punctuation">,</span> firstParams <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token operator">...</span>fn</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span>
+  fn<span class="token punctuation">.</span><span class="token function">reduce</span><span class="token punctuation">(</span>
+    <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token parameter">acc<span class="token punctuation">,</span> cur</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">await</span> <span class="token function">cur</span><span class="token punctuation">(</span>request<span class="token punctuation">,</span> <span class="token keyword">await</span> acc<span class="token punctuation">)</span><span class="token punctuation">,</span>
+    Promise<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>firstParams<span class="token punctuation">)</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><div class="custom-block tip"><p>重点来了，参数可以使用 await，参数可以使用 await，参数可以使用 await！！！</p></div> <p>这样我的 compose 最终版完成了，这个版本的 compose 支持异步函数数组，并且串行执行，也可以很方便的做一些管道的异步的流程工作。也刚好实现了项目上的一个问题。</p></div> <footer class="page-edit" style="display:none;"><!----> <div class="last-updated"><span class="prefix">Last Updated: </span> <span class="time">11/24/2021, 3:38:41 AM</span></div></footer> <!----> <!----></main> <!----></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-44bd5a18 data-v-44bd5a18><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-44bd5a18><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-44bd5a18></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-44bd5a18></path></svg></div><!----></div></div>
+    <script src="/blog/assets/js/app.6a5ee54d.js" defer></script><script src="/blog/assets/js/3.85657320.js" defer></script><script src="/blog/assets/js/1.51d2f36d.js" defer></script><script src="/blog/assets/js/30.602a730d.js" defer></script><script src="/blog/assets/js/9.15c99a4c.js" defer></script>
+  </body>
+</html>
