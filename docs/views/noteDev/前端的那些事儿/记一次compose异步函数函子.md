@@ -86,4 +86,51 @@ const compose = ({ request, firstParams }, ...fn) => () =>
 ::: tip
 重点来了，参数可以使用 await，参数可以使用 await，参数可以使用 await！！！
 :::
-这样我的 compose 最终版完成了，这个版本的 compose 支持异步函数数组，并且串行执行，也可以很方便的做一些管道的异步的流程工作。也刚好实现了项目上的一个问题。
+这样我的 compose 最终版完成了，这个版本的 compose 支持异步函数数组，并且串行执行，也可以很方便的做一些管道的异步的流程工作。也刚好实现了项目上的一个责任链模式的调用工作流程。
+
+### compose.ver4.0
+
+在使用函数式编程时，我们一般都需要遵守纯函数原则，不让函数产生过多的副作用，但是 fn 数组中的函子，不可能仅仅取数据，而不对外部进行一些修改操作，此时，如果对外部进行操作，那么，显然违背了我们的函数式编程，那么，我们应该如何是好呢？能否通过传参，去处理逻辑，答案肯定是可以的，我们可以穿插 callback 回调函数，当需要修改外部变量的时候，我们就在 compose 层，传入对应函数的 callback。那么首先，我们先改写下 compose，使其支持更多的公共参数，上面的 ver3.0 还只是支持一个公共参数。
+
+```js
+export const compose = ({ firstParams, ...args }, ...fn) => () =>
+  fn.reduce(
+    async (acc, cur) => await cur(await acc, { ...args }),
+    Promise.resolve(firstParams)
+  );
+```
+
+::: tip
+通过 es6 的解构对象剩余参数，给 compose 的第一个参数，传入更多公共参数 args，这样只要哪个函子用到，只需要解构下对应的 callback 函数名即可，很方便!
+:::
+
+下面看看一个用法吧:
+
+```js
+// 第二个参数就是寸的公共参数，包含请求器，及回调函数
+async function getOpenId(code, { request, getOpenIdCallBack }) {
+  const res = await request.get({ url: "/sys/getOpenId" });
+  if (res.data.code === 0) {
+    getOpenIdCallBack(res.data.data);
+    return res.data.data;
+  }
+  return null;
+}
+
+// 通过在这一层去处理外部变量，尽量使内部的函子保持纯函数的特性，不会带来更多其他的副作用
+const process = await compose(
+  {
+    firstParams,
+    request,
+    // getOpenId函子的cb
+    getOpenIdCallBack: payload => {
+      this.name = payload.name;
+      // todo other
+    }
+  },
+  getOpenId,
+  getUserInfoByOpenId
+);
+```
+
+大概用法就是这样了，其实还有优化的地方，这个 compose 让调用者调用的体验整体来讲并不是很友好，如果是给其他小伙伴用，他们可能会很疑惑，这其中的规则，所以，可以用 ts 定义好，这样在调用的时候，就用良好的代码提示，或者是写一个编译函数 compile，设计一个体验感最好的调用方式，在解析成这个 compose 支持的格式也可以的。
