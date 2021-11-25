@@ -91,6 +91,7 @@ module.exports = {
     ],
     vssueConfig: {
       baseURL: "Github",
+      proxy: url => "https://cors-anywhere.azm.workers.dev/" + url,
       owner: "phy-lei",
       repo: "blog",
       clientId: secret.Vssue_ClientId,
