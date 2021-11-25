@@ -101,13 +101,13 @@ export const compose = ({ firstParams, ...args }, ...fn) => () =>
 ```
 
 ::: tip
-通过 es6 的解构对象剩余参数，给 compose 的第一个参数，传入更多公共参数 args，这样只要哪个函子用到，只需要解构下对应的 callback 函数名即可，很方便!
+通过 es6 的解构对象剩余 key，给 compose 的第一个参数，传入更多公共参数 args，这样只要哪个函子用到，只需要解构下对应的 callback 函数名即可，很方便!
 :::
 
 下面看看一个用法吧:
 
 ```js
-// 第二个参数就是寸的公共参数，包含请求器，及回调函数
+// 第二个参数就是存的公共参数，包含请求器，及回调函数
 async function getOpenId(code, { request, getOpenIdCallBack }) {
   const res = await request.get({ url: "/sys/getOpenId" });
   if (res.data.code === 0) {
