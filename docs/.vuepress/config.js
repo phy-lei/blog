@@ -137,6 +137,7 @@ module.exports = {
       serviceWorker: true,
       updatePopup: true
     }
+
   },
 
   define: {
