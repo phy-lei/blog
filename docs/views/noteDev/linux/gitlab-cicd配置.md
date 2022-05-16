@@ -140,7 +140,7 @@ stages:
 # build 阶段的工作
 build-job:
   only:
-    - project-zengcheng-fyjz-release
+    - master
   stage: build
   tags:
     - build
@@ -157,7 +157,7 @@ build-job:
 # deploy 阶段的工作
 deploy-job:
   only:
-    - project-zengcheng-fyjz-release
+    - master
   stage: deploy
   tags:
     - build
@@ -187,11 +187,11 @@ deploy-job:
     - mkdir -p ~/.ssh
     - chmod 700 ~/.ssh
 
-    - ssh-keyscan 120.77.92.10 >> ~/.ssh/known_hosts
+    - ssh-keyscan <host> >> ~/.ssh/known_hosts
     - chmod 644 ~/.ssh/known_hosts
   script:
     - echo "🚚 开始发送包"
-    - ls
-    - scp -r dist root@120.77.92.10:/usr/local/nginx/html/command/
+    - ssh root@<host> "cd /usr/local/nginx/html/command/ && rm -rf dist"
+    - scp -r dist root@<host>:/usr/local/nginx/html/command/
     - echo "😄 部署完成"
 ```
