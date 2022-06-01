@@ -80,6 +80,7 @@ ssh-copy-id <username>@<host> # 这会追加公钥在远程服务器的~/.ssh/au
 #### 1.添加私钥到 gitlab 网页
 
 <img :src="$withBase('/assets/20220513/02.png')" alt="">
+
 ::: tip
 将在服务器生成的私钥复制到这里
 :::
