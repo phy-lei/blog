@@ -24,15 +24,15 @@ npm install -g pnpm@6.33.1
 #### 安装全局依赖
 
 ::: tip
-pnpm install <packgeName> -w
+pnpm install {packgeName} -w
 :::
 
 #### 安装局部依赖
 
 ::: tip
-pnpm install <packgeName> -r --filter <projectName> <br>
+pnpm install {packgeName} -r --filter {projectName} <br>
 也可以安装 dev 版本 加上-D
-pnpm install <packgeName> -D -r --filter <projectName>
+pnpm install {packgeName} -D -r --filter {projectName}
 :::
 
 #### package 之间内部依赖安装
