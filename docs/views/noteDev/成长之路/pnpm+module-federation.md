@@ -31,7 +31,7 @@ pnpm install {packgeName} -w
 
 ::: tip
 pnpm install {packgeName} -r --filter {projectName} <br>
-也可以安装 dev 版本 加上-D
+也可以安装 dev 版本 加上-D <br>
 pnpm install {packgeName} -D -r --filter {projectName}
 :::
 
