@@ -67,7 +67,7 @@ ssh-keygen -t rsa # rsa 是加密算法，还可以选择 dsa 等算法
 #### 2.将 id_rsa.pub 放入服务器
 
 ::: tip
-ssh-copy-id <username>@<host> # 这会追加公钥在远程服务器的~/.ssh/authorized_keys 文件中
+ssh-copy-id \<username>@\<host> # 这会追加公钥在远程服务器的~/.ssh/authorized_keys 文件中
 :::
 
 用这条命令是最合适的，不要用 scp ~\.ssh\id_rsa.pub username@host:.ssh\这条命令，这可能会有问题，对于 authorized_keys 文件。
@@ -75,7 +75,7 @@ ssh-copy-id <username>@<host> # 这会追加公钥在远程服务器的~/.ssh/au
 
 ### ssh 踩坑记录
 
-安装准备都可以了。这里面踩的坑属实是 ssh 这一流程，花了我 2 天时间，无论我怎么做，他都是 failed，看着几百条 failed 的 pipeline，心里交瘁，使用了 shell 执行器，在 gitlab-runner，add ssh-keys，runner 跑的时候，一直没有密钥，无论在外层，还是 docker 内，ssh-keys 都加了个遍，但无论怎么做，他在 runner 跑的时候，私钥就是不存在/.ssh 文件夹下，很奇怪，然后搜了很多资料，发现官方给我们推荐的说法是，ssh 连接，需要在 gitlab 网页使用变量存储私钥，然后在 runner 跑的时候，使用变量读取。
+安装准备都可以了。这里面踩的坑属实是 ssh 这一流程，花了我 2 天时间，无论我怎么做，他都是 failed，看着几百条 failed 的 pipeline，心力交瘁，使用了 shell 执行器，在 gitlab-runner，add ssh-keys，runner 跑的时候，一直没有密钥，无论在外层，还是 docker 内，ssh-keys 都加了个遍，但无论怎么做，他在 runner 跑的时候，私钥就是不存在/.ssh 文件夹下，很奇怪，然后搜了很多资料，发现官方给我们推荐的说法是，ssh 连接，需要在 gitlab 网页使用变量存储私钥，然后在 runner 跑的时候，使用变量读取。
 
 #### 1.添加私钥到 gitlab 网页
 
