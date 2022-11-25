@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>利用keepAlive缓存页面 | phy-lei</title>
+    <meta name="generator" content="VuePress 1.5.0">
+    <link rel="icon" href="/blog/favicon3.ico">
+    <link rel="manifest" href="/blog/manifest.json">
+    <link rel="apple-touch-icon" href="/blog/icons/icon-152x152.png">
+    <link rel="mask-icon" href="/blog/icons/safari-pinned-tab.svg" color="#3eaf7c">
+    <meta name="description" content="残留枝头的樱花瓣，也终将迎来凋零的命运">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="msapplication-TileImage" content="/icons/icon-144x144.png">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <link rel="preload" href="/blog/assets/css/0.styles.9a13c917.css" as="style"><link rel="preload" href="/blog/assets/js/app.394f1232.js" as="script"><link rel="preload" href="/blog/assets/js/3.1d0553cb.js" as="script"><link rel="preload" href="/blog/assets/js/1.e0ccd5ab.js" as="script"><link rel="preload" href="/blog/assets/js/25.bb36bd54.js" as="script"><link rel="preload" href="/blog/assets/js/10.c35fdf02.js" as="script"><link rel="prefetch" href="/blog/assets/js/11.f913f133.js"><link rel="prefetch" href="/blog/assets/js/12.03fbf9d6.js"><link rel="prefetch" href="/blog/assets/js/13.fb421e4a.js"><link rel="prefetch" href="/blog/assets/js/14.3b5a59ef.js"><link rel="prefetch" href="/blog/assets/js/15.5dea467a.js"><link rel="prefetch" href="/blog/assets/js/16.d1a10e76.js"><link rel="prefetch" href="/blog/assets/js/17.c3dc14f5.js"><link rel="prefetch" href="/blog/assets/js/18.5a64d7a5.js"><link rel="prefetch" href="/blog/assets/js/19.7dd95545.js"><link rel="prefetch" href="/blog/assets/js/20.6fe4c2a2.js"><link rel="prefetch" href="/blog/assets/js/21.2de00e28.js"><link rel="prefetch" href="/blog/assets/js/22.cd885551.js"><link rel="prefetch" href="/blog/assets/js/23.e2b5fa89.js"><link rel="prefetch" href="/blog/assets/js/24.d464d9f0.js"><link rel="prefetch" href="/blog/assets/js/26.1d165ca2.js"><link rel="prefetch" href="/blog/assets/js/27.3bab0f35.js"><link rel="prefetch" href="/blog/assets/js/28.3ff2367e.js"><link rel="prefetch" href="/blog/assets/js/29.1a73f6e8.js"><link rel="prefetch" href="/blog/assets/js/30.48097f68.js"><link rel="prefetch" href="/blog/assets/js/31.f05cca76.js"><link rel="prefetch" href="/blog/assets/js/32.6fc028cd.js"><link rel="prefetch" href="/blog/assets/js/33.5fe7d102.js"><link rel="prefetch" href="/blog/assets/js/34.bf4f36ba.js"><link rel="prefetch" href="/blog/assets/js/35.74c47905.js"><link rel="prefetch" href="/blog/assets/js/36.8865821e.js"><link rel="prefetch" href="/blog/assets/js/37.17ab910f.js"><link rel="prefetch" href="/blog/assets/js/38.958915af.js"><link rel="prefetch" href="/blog/assets/js/39.c45a56b3.js"><link rel="prefetch" href="/blog/assets/js/4.d0f4a55d.js"><link rel="prefetch" href="/blog/assets/js/40.4214d5ba.js"><link rel="prefetch" href="/blog/assets/js/41.5a42794f.js"><link rel="prefetch" href="/blog/assets/js/42.da32e178.js"><link rel="prefetch" href="/blog/assets/js/43.e9d55361.js"><link rel="prefetch" href="/blog/assets/js/44.3a6611f5.js"><link rel="prefetch" href="/blog/assets/js/45.6316bd83.js"><link rel="prefetch" href="/blog/assets/js/46.f4311427.js"><link rel="prefetch" href="/blog/assets/js/47.bbef0cd6.js"><link rel="prefetch" href="/blog/assets/js/5.03ebc6e9.js"><link rel="prefetch" href="/blog/assets/js/6.a1fd875e.js"><link rel="prefetch" href="/blog/assets/js/7.fb3f8319.js"><link rel="prefetch" href="/blog/assets/js/8.14261d42.js"><link rel="prefetch" href="/blog/assets/js/9.16585bcc.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.9a13c917.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-19557b78><div data-v-19557b78><div id="loader-wrapper" class="loading-wrapper" data-v-d48f4d20 data-v-19557b78 data-v-19557b78><div class="loader-main" data-v-d48f4d20><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-64685f0e data-v-19557b78 data-v-19557b78><h3 class="title" style="display:none;" data-v-64685f0e data-v-64685f0e>phy-lei</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-64685f0e data-v-64685f0e><input type="password" value="" data-v-64685f0e> <span data-v-64685f0e>Konck! Knock!</span> <button data-v-64685f0e>OK</button></label> <div class="footer" style="display:none;" data-v-64685f0e data-v-64685f0e><span data-v-64685f0e><i class="iconfont reco-theme" data-v-64685f0e></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-64685f0e>vuePress-theme-reco</a></span> <span data-v-64685f0e><i class="iconfont reco-copyright" data-v-64685f0e></i> <a data-v-64685f0e><span data-v-64685f0e>phy-lei</span>
+            
+          <!---->
+          2022
+        </a></span></div></div> <div class="hide" data-v-19557b78><header class="navbar" data-v-19557b78><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><img src="/blog/mine.jpg" alt="phy-lei" class="logo"> <span class="site-name">phy-lei</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/" class="nav-link"><i class="iconfont reco-home"></i>
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      Category
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/categories/article/" class="nav-link"><i class="iconfont undefined"></i>
+  article
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/css/" class="nav-link"><i class="iconfont undefined"></i>
+  css
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/git/" class="nav-link"><i class="iconfont undefined"></i>
+  git
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/linux/" class="nav-link"><i class="iconfont undefined"></i>
+  linux
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/react/" class="nav-link"><i class="iconfont undefined"></i>
+  react
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/vue/" class="nav-link"><i class="iconfont undefined"></i>
+  vue
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/vuepress/" class="nav-link"><i class="iconfont undefined"></i>
+  vuepress
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/前端的那些事儿/" class="nav-link"><i class="iconfont undefined"></i>
+  前端的那些事儿
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/成长之路/" class="nav-link"><i class="iconfont undefined"></i>
+  成长之路
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/数据结构与算法/" class="nav-link"><i class="iconfont undefined"></i>
+  数据结构与算法
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/面试/" class="nav-link"><i class="iconfont undefined"></i>
+  面试
+</a></li></ul></div></div><div class="nav-item"><a href="/blog/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  Tag
+</a></div><div class="nav-item"><a href="/blog/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      Contact
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/phy-lei" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-19557b78></div> <aside class="sidebar" data-v-19557b78><div class="personal-info-wrapper" data-v-b038cec6><img src="/blog/mine.jpg" alt="author-avatar" class="personal-img" data-v-b038cec6> <h3 class="name" data-v-b038cec6>
+    phy-lei
+  </h3> <div class="num" data-v-b038cec6><div data-v-b038cec6><h3 data-v-b038cec6>34</h3> <h6 data-v-b038cec6>Article</h6></div> <div data-v-b038cec6><h3 data-v-b038cec6>12</h3> <h6 data-v-b038cec6>Tag</h6></div></div> <hr data-v-b038cec6></div> <nav class="nav-links"><div class="nav-item"><a href="/blog/" class="nav-link"><i class="iconfont reco-home"></i>
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      Category
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/categories/article/" class="nav-link"><i class="iconfont undefined"></i>
+  article
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/css/" class="nav-link"><i class="iconfont undefined"></i>
+  css
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/git/" class="nav-link"><i class="iconfont undefined"></i>
+  git
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/linux/" class="nav-link"><i class="iconfont undefined"></i>
+  linux
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/react/" class="nav-link"><i class="iconfont undefined"></i>
+  react
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/vue/" class="nav-link"><i class="iconfont undefined"></i>
+  vue
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/vuepress/" class="nav-link"><i class="iconfont undefined"></i>
+  vuepress
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/前端的那些事儿/" class="nav-link"><i class="iconfont undefined"></i>
+  前端的那些事儿
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/成长之路/" class="nav-link"><i class="iconfont undefined"></i>
+  成长之路
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/数据结构与算法/" class="nav-link"><i class="iconfont undefined"></i>
+  数据结构与算法
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/面试/" class="nav-link"><i class="iconfont undefined"></i>
+  面试
+</a></li></ul></div></div><div class="nav-item"><a href="/blog/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  Tag
+</a></div><div class="nav-item"><a href="/blog/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      Contact
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/phy-lei" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>利用keepAlive缓存页面</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/20221125/#场景介绍" class="sidebar-link">场景介绍</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/20221125/#需求分析" class="sidebar-link">需求分析</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/20221125/#_1-动态-include-数组" class="sidebar-link">1. 动态 include 数组</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/blog/20221125/#_2-时间戳-key" class="sidebar-link">2. 时间戳 key</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/20221125/#主要代码" class="sidebar-link">主要代码</a></li></ul></li><li><a href="/blog/20221125/#总结" class="sidebar-link">总结</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-64685f0e data-v-19557b78><h3 class="title" style="display:none;" data-v-64685f0e data-v-64685f0e>利用keepAlive缓存页面</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-64685f0e data-v-64685f0e><input type="password" value="" data-v-64685f0e> <span data-v-64685f0e>Konck! Knock!</span> <button data-v-64685f0e>OK</button></label> <div class="footer" style="display:none;" data-v-64685f0e data-v-64685f0e><span data-v-64685f0e><i class="iconfont reco-theme" data-v-64685f0e></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-64685f0e>vuePress-theme-reco</a></span> <span data-v-64685f0e><i class="iconfont reco-copyright" data-v-64685f0e></i> <a data-v-64685f0e><span data-v-64685f0e>phy-lei</span>
+            
+          <!---->
+          2022
+        </a></span></div></div> <div data-v-19557b78><main class="page"><div class="page-title" style="display:none;"><h1>利用keepAlive缓存页面</h1> <hr> <div data-v-484a899e><i class="iconfont reco-account" data-v-484a899e><span data-v-484a899e>phy-lei</span></i> <i class="iconfont reco-date" data-v-484a899e><span data-v-484a899e>2022-11-25</span></i> <!----> <i class="iconfont reco-tag tags" data-v-484a899e><span class="tag-item" data-v-484a899e>
+      vue
+    </span></i></div></div> <div class="theme-reco-content content__default" style="display:none;"><h2 id="场景介绍"><a href="#场景介绍" class="header-anchor">#</a> 场景介绍</h2> <p>项目中经常会有这么一个需求，一个表单页面，可能需要跳转其他页面拿到对应的数据，再跳回表单页面，但是之前填写过的数据还在。而某些页面跳这个表单页面的时候，是不需要缓存，因为他是新增，如果是缓存的话，那么上次填的数据，下次进入这个表单页面的时候，那么数据还存在，明显不符合设计的要求。</p> <h2 id="需求分析"><a href="#需求分析" class="header-anchor">#</a> 需求分析</h2> <p>因为项目中使用的是 vue3，所以对于页面缓存，第一时间想到就是利用 keepAlive 做缓存，但是如果不做其他处理的话，仅仅简单使用 keepAlive 会带来一些问题，就像上面说的，如果上次填的数据，回退到上一个页面，再进来表单页，那么上次填的数据还存在，那么，我们该怎么去清掉缓存，什么时候又加入缓存呢，而且清缓存和加入缓存的时机，我们又怎么把握呢，这就是我们需要解决的难题。</p> <h2 id="_1-动态-include-数组"><a href="#_1-动态-include-数组" class="header-anchor">#</a> 1. 动态 include 数组</h2> <p>一开始，我想到的是，维护 keepAlive 的 include 数组，这个数组我使用的是 set 数据结构，因为有比较方便的增删方法，而且不重复，代码如下：</p> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token comment">// useCache.ts</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> ref <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;vue&quot;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> <span class="token constant">KEEP_ALIVE_SET</span> <span class="token operator">=</span> <span class="token function">ref</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Set</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> setKeepAlive <span class="token operator">=</span> <span class="token operator">&lt;</span><span class="token constant">T</span> <span class="token keyword">extends</span> <span class="token string">&quot;add&quot;</span> <span class="token operator">|</span> <span class="token string">&quot;delete&quot;</span><span class="token operator">&gt;</span><span class="token punctuation">(</span>
+    <span class="token parameter">operate<span class="token operator">:</span> <span class="token constant">T</span><span class="token punctuation">,</span>
+    value<span class="token operator">:</span> <span class="token builtin">number</span></span>
+  <span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token constant">KEEP_ALIVE_SET</span><span class="token punctuation">.</span>value<span class="token punctuation">[</span>operate<span class="token punctuation">]</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    <span class="token constant">KEEP_ALIVE_SET</span><span class="token punctuation">,</span>
+    setKeepAlive
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><div class="language-html extra-class"><pre class="language-html"><code><span class="token comment">&lt;!-- App.vue --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>router-view</span> <span class="token attr-name">v-slot</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>{ Component }<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>transition</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>router-fade<span class="token punctuation">&quot;</span></span> <span class="token attr-name">mode</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>out-in<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>keep-alive</span> <span class="token attr-name">:include</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>Array.from(KEEP_ALIVE_SET)<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>component</span> <span class="token attr-name">:is</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>Component<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>keep-alive</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>transition</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>router-view</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><div class="custom-block tip"><p>关于这里 setKeepAlive 的时机的心智负担着实有点大，因为 add 的时候，存在着大量的页面进行 add，即使用了路由守卫去设置，逻辑的编写也充斥着代码本身，随着页面变多，这心智负担也会呈现直线增长，并且这还会有一个 bug，当 add 缓存的时候，首次进入缓存页面，其实他还没缓存下来，我们都知道 keepAlive 执行缓存，需要首次进入页面的时候记录下来，之后再进入的时候，判断该页面是否已经加载过，就不执行重新渲染，也就造成了，缓存能生效是在第二次进入这个页面的时候，这明显与我们的预想不符合，所以该方案也就 pass 掉了。</p></div> <h2 id="_2-时间戳-key"><a href="#_2-时间戳-key" class="header-anchor">#</a> 2. 时间戳 key</h2> <p>我们回顾下关于在 vue 中的 key 属性：</p> <div class="custom-block tip"><p>key 这个特殊的 attribute 主要作为 Vue 的虚拟 DOM 算法提示，在比较新旧节点列表时用于识别 vnode。如果 key 相同，会最小化触发重新渲染（达到缓存的目的），如果 key 不同，那么肯定会发生替换。</p></div> <h3 id="主要代码"><a href="#主要代码" class="header-anchor">#</a> 主要代码</h3> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token comment">// useCache.ts</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> ref <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;vue&quot;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> kEEP_ALIVE_MAP <span class="token operator">=</span> <span class="token function">ref</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Map</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> <span class="token function-variable function">setKeepAlive</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">key<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span> value<span class="token operator">:</span> <span class="token builtin">number</span></span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    kEEP_ALIVE_MAP<span class="token punctuation">.</span>value<span class="token punctuation">.</span><span class="token keyword">set</span><span class="token punctuation">(</span>key<span class="token punctuation">,</span> value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    kEEP_ALIVE_MAP<span class="token punctuation">,</span>
+    setKeepAlive
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><div class="language-html extra-class"><pre class="language-html"><code><span class="token comment">&lt;!-- App.vue --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token comment">&lt;!-- 利用缓存的时间戳key 保证页面保鲜 --&gt;</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>router-view</span> <span class="token attr-name">v-slot</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>{ Component }<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>keep-alive</span> <span class="token attr-name">:max</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>5<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>component</span>
+        <span class="token attr-name">:is</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>Component<span class="token punctuation">&quot;</span></span>
+        <span class="token attr-name">v-if</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>$route.meta.keepAlive<span class="token punctuation">&quot;</span></span>
+        <span class="token attr-name">:key</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>$route.meta.keepAlive ? kEEP_ALIVE_MAP.get($route.name) : $route.path<span class="token punctuation">&quot;</span></span>
+      <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>keep-alive</span><span class="token punctuation">&gt;</span></span>
+
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>component</span>
+      <span class="token attr-name">:is</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>Component<span class="token punctuation">&quot;</span></span>
+      <span class="token attr-name">v-if</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>!$route.meta.keepAlive<span class="token punctuation">&quot;</span></span>
+      <span class="token attr-name">:key</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>$route.name<span class="token punctuation">&quot;</span></span>
+    <span class="token punctuation">/&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>router-view</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p>a 页面去到表单页，不需要缓存：</p> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">const</span> <span class="token function-variable function">goAddOrdersPage</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 设置时间戳key 保证每次从这个页面跳转，key都是最新的，进入表单页也就一直重新渲染</span>
+  <span class="token function">setKeepAlive</span><span class="token punctuation">(</span><span class="token string">&quot;AddOrder&quot;</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getTime</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  router<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    name<span class="token operator">:</span> <span class="token string">&quot;AddOrder&quot;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p>b 页面操作完成后，回到表单页面，需要缓存：</p> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token comment">// 路由导航守卫</span>
+<span class="token function">onBeforeRouteLeave</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">to<span class="token punctuation">,</span> <span class="token keyword">from</span><span class="token punctuation">,</span> next</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 如果不是去的表单页面，那么就重新更新表单页面的key，否则的话，就直接next，这样就可以在表单页面用到的key还是旧的时间戳key，以此达到缓存目的</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>to<span class="token punctuation">.</span>name <span class="token operator">!==</span> <span class="token string">&quot;AddOrder&quot;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">setKeepAlive</span><span class="token punctuation">(</span><span class="token string">&quot;AddOrder&quot;</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getTime</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="总结"><a href="#总结" class="header-anchor">#</a> 总结</h2> <p>在维护该 key 的时候，我使用的是一个全局变量维护，利用 hooks 的形式，在各个页面之间进行设置，当然这只是比较简单的一种处理方法，其实方法有很多，也可以用状态管理器 vuex 或 pinia。<span style="color:red;">注意：如果用 params 进行传值，vue-router 会给出警告，目前这个方案是官方也不建议的，而且我自己也试过，params 会获取不到值。</span></p></div> <footer class="page-edit" style="display:none;"><!----> <div class="last-updated"><span class="prefix">Last Updated: </span> <span class="time">11/25/2022, 3:37:06 AM</span></div></footer> <!----> <!----></main> <!----></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-44bd5a18 data-v-44bd5a18><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-44bd5a18><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-44bd5a18></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-44bd5a18></path></svg></div><!----></div></div>
+    <script src="/blog/assets/js/app.394f1232.js" defer></script><script src="/blog/assets/js/3.1d0553cb.js" defer></script><script src="/blog/assets/js/1.e0ccd5ab.js" defer></script><script src="/blog/assets/js/25.bb36bd54.js" defer></script><script src="/blog/assets/js/10.c35fdf02.js" defer></script>
+  </body>
+</html>
