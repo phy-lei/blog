@@ -24,9 +24,13 @@ jobs:
         with:
           node-version: "14.16.0"
 
+      - name: Setup Yarn
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: version
+
       # 生成静态文件
       - name: Build
-        uses: borales/actions-yarn@v4
         run: yarn install && yarn build
 
       # 部署到 GitHub Pages
