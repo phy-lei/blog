@@ -1,9 +1,3 @@
-const process = process
-  ? process
-  : {
-      env: {}
-    };
-console.log(process.env);
 module.exports = {
   base: "/blog/",
   title: "phy-lei",
