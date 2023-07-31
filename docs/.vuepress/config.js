@@ -94,8 +94,8 @@ module.exports = {
       proxy: url => "https://cors-anywhere.azm.workers.dev/" + url,
       owner: "phy-lei",
       repo: "blog",
-      clientId: secret.Vssue_ClientId,
-      clientSecret: secret.Vssue_ClientSecret,
+      clientId: process.env.VSSUE_CLIENTID,
+      clientSecret: process.env.VSSUE_CLIENTSECRET,
       autoCreateIssue: false
     },
     logo: "/mine.jpg",
@@ -132,7 +132,7 @@ module.exports = {
   },
   plugins: {
     "@vuepress/google-analytics": {
-      ga: secret.ga
+      ga: process.env.GA
     },
     "@vuepress/pwa": {
       serviceWorker: true,
