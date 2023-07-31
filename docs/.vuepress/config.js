@@ -1,5 +1,5 @@
 const secret = require("./secret.js");
-console.log(process.env.NODE_ENV);
+console.log(process.env);
 module.exports = {
   base: "/blog/",
   title: "phy-lei",
