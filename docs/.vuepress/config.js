@@ -1,5 +1,3 @@
-const secret = require("./secret.js");
-console.log(process.env);
 module.exports = {
   base: "/blog/",
   title: "phy-lei",
@@ -123,8 +121,7 @@ module.exports = {
           enable: true
         }
       }
-    },
-
+    }
   },
   markdown: {
     lineNumbers: false,
@@ -138,10 +135,12 @@ module.exports = {
       serviceWorker: true,
       updatePopup: true
     }
-
   },
 
   define: {
-    "process.env.NODE_ENV": process.env.NODE_ENV
+    "process.env.NODE_ENV": process.env.NODE_ENV,
+    "process.env.VSSUE_CLIENTID": process.env.VSSUE_CLIENTID,
+    "process.env.VSSUE_CLIENTSECRET": process.env.VSSUE_CLIENTSECRET,
+    "process.env.GA": process.env.GA
   }
 };
