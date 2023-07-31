@@ -12,10 +12,7 @@ jobs:
   build-and-deploy:
     # 服务器环境：最新版 Ubuntu
     runs-on: ubuntu-latest
-    env:
-      VSSUE_CLIENTSECRET: ${{ secrets.VSSUE_CLIENTSECRET }}
-      VSSUE_CLIENTID: ${{ secrets.VSSUE_CLIENTID }}
-      GA: ${{ secrets.GA }}
+  
     steps:
       # 拉取代码
       - name: Checkout
@@ -36,6 +33,10 @@ jobs:
 
       # 生成静态文件
       - name: Build
+        env:
+          VSSUE_CLIENTSECRET: ${{ secrets.VSSUE_CLIENTSECRET }}
+          VSSUE_CLIENTID: ${{ secrets.VSSUE_CLIENTID }}
+          GA: ${{ secrets.GA }}
         run: echo ”vailible is $VSSUE_CLIENTSECRET“
         
 
