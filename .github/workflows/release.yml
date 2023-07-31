@@ -37,7 +37,7 @@ jobs:
           VSSUE_CLIENTSECRET: ${{ secrets.VSSUE_CLIENTSECRET }}
           VSSUE_CLIENTID: ${{ secrets.VSSUE_CLIENTID }}
           GA: ${{ secrets.GA }}
-        run: echo ”vailible is $VSSUE_CLIENTSECRET“
+        run: echo ”vailible is ${{env.GA}}“
         
 
       # 部署到 GitHub Pages
