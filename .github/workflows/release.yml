@@ -13,9 +13,9 @@ jobs:
     # 服务器环境：最新版 Ubuntu
     runs-on: ubuntu-latest
     env:
-      VSSUE_CLIENTSECRET: ${{ env.VSSUE_CLIENTSECRET }}
-      VSSUE_CLIENTID: ${{ env.VSSUE_CLIENTID }}
-      GA: ${{ env.GA }}
+      VSSUE_CLIENTSECRET: ${{ secrets.VSSUE_CLIENTSECRET }}
+      VSSUE_CLIENTID: ${{ secrets.VSSUE_CLIENTID }}
+      GA: ${{ secrets.GA }}
     steps:
       # 拉取代码
       - name: Checkout
