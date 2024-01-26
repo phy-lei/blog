@@ -112,10 +112,10 @@ module.exports = {
   ],
 };
 ```
-> 该moduleName设置只能是一个npm包，要么设置webpack的alias，但是这样设置会把plugin里面饮入的render设置一次，用户侧也设置一次，他们两个的路径还不一致，导致冲突。
+> 该moduleName设置只能是一个npm包，要么设置webpack的alias，但是这样设置会把plugin里面引入的render设置一次，用户侧也设置一次，他们两个的路径还不一致，导致冲突。
 
 不得已只能做2个包了，使用pnpm的monorepo架构，由于项目还有个example，也能方便自己在修改plugin后，进行测试。
-遇到最蠢的问题是，plugin侧，忘记把render包pnpm i进来了，导致报错，这个报错的信息并不是报module not found，而是其他奇怪的报错信息，处理这个问题，花了我2天时间。没想到仅仅只是我忘记安装这个包了😫。
+遇到最蠢的问题是，在plugin侧忘记把render包pnpm i进来了，导致报错，这个报错的信息并不是报module not found，而是其他奇怪的报错信息，处理这个问题，花了我2天时间。没想到仅仅只是我忘记安装这个包了😫。
 然后就是render包的一些写法了，不过这里很多都是参考了之前给taro提pr的那位老哥的<a href="https://github.com/NervJS/taro/issues/12834" target="_Blank">代码</a>。我发现最终实现的版本居然长得很像，一开始的设计并不是这么设计的，但是随着开发的深入，debug次数越来越多，与这位老哥遇到的问题都是莫名的一致，特别是包括h函数的实现，我还去solid的仓库搜了是否有h函数的实现，也在其中找到这位老哥的讨论<a href="https://github.com/solidjs/solid/discussions/1612" target="_Blank">地址</a>。
 
 # 未来计划
