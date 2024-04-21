@@ -42,13 +42,16 @@ export const View = (props) => <view {...props}>{props.children}</view>
 
 export const Text = (props) => <text {...props}>{props.children}</text>
 ```
-从结论上来说，这是能顺利成功编译的，不过他存在一个问题，在solid经babel转换后的源码，他会多加get children，这无论在编译体积，还是运行时性能，都会存在一定的损耗，特别是组件层级嵌套过深的时候，这个带来的影响就比较明显，而且咱们还是运行在小程序端。所以这个方案也是最低选择项。
-**插入图片**
+从结论上来说，这是能成功编译的，不过他存在一个问题，在solid经babel转换后的源码，他会多加get children，这无论在编译体积，还是运行时性能，都会存在一定的损耗，特别是组件层级嵌套过深的时候，这个带来的影响就比较明显，而且咱们还是运行在小程序端。所以这个方案也是最低选择项。
+<img :src="$withBase('/assets/20240419/01.png')" alt="">
 
 ### babel
 又迎来我们常驻嘉宾babel，最近老跟他打交道了属于是，在之前我们的解决策略是，在babel进行小程序组件收集，让他能够顺利编译使用原生的小程序标签。
 那么我们是否可以思路反转一下，我还是使用jsx组件的引入写法，但是在babel的transformElement的时候，识别当前的节点是否是@tarojs/components里的，然后转换为小程序的原生标签，让其走createElement的分支，那么编译后的结果，从理论上来说，是跟写原生小程序标签是一致的，性能上也是最优解。但是有个问题，就是如果用户写的组件跟@tarojs/components里的一样，那岂不是编译错乱了？
+babel转换组件处理后编译结果：
+<img :src="$withBase('/assets/20240419/02.png')" alt="">
 
-### 解决组件重名
+#### 解决组件重名
+
 
 ### 解决组件别名
