@@ -51,6 +51,18 @@ export const Text = (props) => <text {...props}>{props.children}</text>
 babel转换组件处理后编译结果：
 <img :src="$withBase('/assets/20240419/02.png')" alt="">
 
+处理流程图：
+```mermaid
+graph
+A(tsx单文件入口) --> B[收集组件]
+B --transformElement--> C{当前节点node是否是小程序组件}
+C --是--> D[改变tagName为原生标签]
+C --否--> E[继续往下执行]
+E --> Z[文件transform完成<br>收集组件缓存清空]
+D --> F[使用createElement分支创建元素]
+F --> Z
+```
+
 #### 解决组件重名
 为了解决用户使用的组件命名是跟@tarojs/components里的导出命名一致:
 ```js
